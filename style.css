@@ -2,55 +2,81 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
+    background-image: url('images/Image.jpg'); /* Background Image */
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
 }
 
 .header-container {
     text-align: left;
-    padding: 20px;
+    padding: 40px;
     background: rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
 .logo {
-    max-width: 80px; /* Adjust the size as needed */
+    max-width: 140px; /* Size of the Logo */
     height: auto;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+nav {
+    margin-top: 80px; /* Get all text below the logo */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-left: 40px;
+    font-size: 1.5em; /* Adjust the font size for navigation links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Set link color */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition effect for color change */
+}
+
+nav ul li a:hover {
+    color: #7dfd4e; /* Change color on hover */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Increase the font size of the heading */
     margin-top: 20px;
+    margin-right: 40px; /* Adjust the margin to move it to the right */
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increase the font size of the paragraph */
     margin-top: 20px;
+    margin-right: 40px; /* Adjust the margin to move it to the right */
 }
 
 button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #7DFD4E;
+    font-size: 1.8em; /* Increase the font size of the button */
+    padding: 15px 30px;
+    background-color: #7dfd4e;
     border-radius: 12px;
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect for background color change */
+    margin-right: 40px; /* Adjust the margin to move it to the right */
+}
+
+button:hover {
+    background-color: #4ca64c; /* Change background color on hover */
 }
 
 footer {
@@ -58,6 +84,6 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.7);
 }
