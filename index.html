@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"> <!-- Poppins Font  -->
-    <link rel="stylesheet" href="style.css"> <!-- Imported CSS File  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- For Font Style  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    <link rel="stylesheet" href="dropdown.css"> <!--  CSS file for dropdown -->
+    <script src="dropdown.js"></script> <!-- JavaScript file for dropdown -->
     <title>Turf Booking System</title>
 </head>
 
@@ -16,14 +16,15 @@
 
     <div class="header-container">
         <a href="index.html">
-            <img src="images/Logo.png" alt="Turf Booking System Logo" class="logo"> <!-- Background Image  -->
+            <img src="images/Logo.png" alt="Turf Booking System Logo" class="logo">
         </a>
 
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><i class="fas fa-user"></i></li> <!-- Icon  -->
+                <!-- Modified the user icon with a unique ID for JavaScript -->
+                <li id="user-icon"><i class="fas fa-user"></i></li>
             </ul>
         </nav>
 

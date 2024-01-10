@@ -32,12 +32,12 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 nav ul li {
-    margin-left: 40px;
-    font-size: 1.5em; /* Adjust the font size for navigation links */
+    margin-left: 60px;
+    font-size: 1.8em; /* Adjust the font size for navigation links */
 }
 
 nav ul li a {
@@ -45,6 +45,7 @@ nav ul li a {
     color: #ffffff; /* Set link color */
     cursor: pointer;
     transition: color 0.3s ease; /* Smooth transition effect for color change */
+
 }
 
 nav ul li a:hover {
@@ -121,4 +122,46 @@ footer {
 .show {
     display: block;
 }
+
+/* Sign Up and Sign In Animation */
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 1 em; /* Adjust the font size */
+    text-align: left; /* Start the text from the left */
+    
+}
+
+.dropdown-content a:hover {
+    background-color: #7dfd4e;
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+
 
