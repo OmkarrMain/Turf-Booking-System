@@ -61,7 +61,7 @@ h1 {
 p {
     font-size: 1.5em; /* Increase the font size of the paragraph */
     margin-top: 20px;
-    margin-right: 40px; /* Adjust the margin to move it to the right */
+    margin-right: 40px; 
 }
 
 button {
@@ -72,12 +72,13 @@ button {
     color: #ffffff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition effect for background color change */
-    margin-right: 40px; /* Adjust the margin to move it to the right */
+    transition: background-color 0.3s ease; 
+    margin-right: 40px; 
 }
 
 button:hover {
-    background-color: #4ca64c; /* Change background color on hover */
+    background-color: #4ca64c; 
+    color: black;
 }
 
 footer {
@@ -162,6 +163,32 @@ footer {
 .show {
     display: block;
 }
-
+/* Code for Box for User Icon */
+#user-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #user-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    border-radius: 50%; /* Makes it a circle */
+    z-index: -1; /* Place it behind the icon */
+  }
+  
+  #user-icon i {
+    position: relative;
+    z-index: 1; /* Place the icon above the pseudo-element */
+    font-size: 24px; /* Adjust the icon size as needed */
+    color: #fff; /* Set the icon color */
+  }
+  
+  
 
 
