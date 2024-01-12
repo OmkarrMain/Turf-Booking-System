@@ -1,194 +1,188 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-image: url('images/Image.jpg'); /* Background Image */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("images/Image.jpg"); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
 }
 
 .header-container {
-    text-align: left;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    position: relative;
+  text-align: left;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .logo {
-    max-width: 140px; /* Size of the Logo */
-    height: auto;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+  max-width: 140px; /* Size of the Logo */
+  height: auto;
+  position: absolute; /*  Logo Will get placed on right */ 
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  justify-content: flex-start;
 }
 
 nav {
-    margin-top: 80px; /* Get all text below the logo */
+  margin-top: 80px; /* Get all text below the logo */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 nav ul li {
-    margin-left: 60px;
-    font-size: 1.8em; /* Adjust the font size for navigation links */
+  margin-left: 60px;
+  font-size: 1.4em; /* Adjust the font size for navigation links */
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underline */
-    color: #ffffff; /* Set link color */
-    cursor: pointer;
-    transition: color 0.3s ease; /* Smooth transition effect for color change */
-
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* Set link color */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition effect for color change */
 }
 
 nav ul li a:hover {
-    color: #7dfd4e; /* Change color on hover */
+  color: #7dfd4e; /* Change color on hover */
 }
 
 h1 {
-    font-size: 3.5em; /* Increase the font size of the heading */
-    margin-top: 20px;
-    margin-right: 40px; /* Adjust the margin to move it to the right */
+  font-size: 3.5em; /* Increase the font size of the heading */
+  margin-top: 20px;
+  margin-right: 40px; /* Adjust the margin to move it to the right */
 }
 
 p {
-    font-size: 1.5em; /* Increase the font size of the paragraph */
-    margin-top: 20px;
-    margin-right: 40px; 
+  font-size: 1.5em; /* Increase the font size of the paragraph */
+  margin-top: 20px;
+  margin-right: 40px;
 }
 
 button {
-    font-size: 1.8em; /* Increase the font size of the button */
-    padding: 15px 30px;
-    background-color: #7dfd4e;
-    border-radius: 12px;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-    margin-right: 40px; 
+  font-size: 1.8em; /* Increase the font size of the button */
+  padding: 15px 30px;
+  background-color: #7dfd4e;
+  border-radius: 12px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 40px;
 }
 
 button:hover {
-    background-color: #4ca64c; 
-    color: black;
+  background-color: #4ca64c;
+  color: black;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropbtn {
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    color: #ffffff;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
 }
 
 .dropdown-content a:hover {
-    background-color: #7dfd4e;
+  background-color: #7dfd4e;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 /* Sign Up and Sign In Animation */
 
-
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-content a {
-    color: #ffffff;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 1 em; /* Adjust the font size */
-    text-align: left; /* Start the text from the left */
-    
+  color: #ffffff;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 1 em; /* Adjust the font size */
+  text-align: left; /* Start the text from the left */
 }
 
 .dropdown-content a:hover {
-    background-color: #7dfd4e;
-    color: black;
+  background-color: #7dfd4e;
+  color: black;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 /* Code for Box for User Icon */
 #user-icon {
-    position: relative;
-    display: inline-block;
-  }
-  
-  #user-icon::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
-    background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
-    border-radius: 50%; /* Makes it a circle */
-    z-index: -1; /* Place it behind the icon */
-  }
-  
-  #user-icon i {
-    position: relative;
-    z-index: 1; /* Place the icon above the pseudo-element */
-    font-size: 24px; /* Adjust the icon size as needed */
-    color: #fff; /* Set the icon color */
-  }
-  
-  
+  position: relative;
+  display: inline-block;
+}
 
+#user-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+  border-radius: 50%; /* Makes it a circle */
+  z-index: -1; /* Place it behind the icon */
+}
 
+#user-icon i {
+  position: relative;
+  z-index: 1; /* Place the icon above the pseudo-element */
+  font-size: 24px; /* Adjust the icon size as needed */
+  color: #fff; /* Set the icon color */
+}
