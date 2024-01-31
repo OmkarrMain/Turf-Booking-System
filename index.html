@@ -13,61 +13,35 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link rel="stylesheet" href="dropdown.css" />
-    <!--  CSS file for dropdown -->
     <script src="dropdown.js"></script>
-    <!-- JavaScript file for dropdown -->
     <title>Turf Booking System</title>
   </head>
-
   <body>
     <div class="header-container">
-      <!-- <table>
-        <tr>
-          <td>
-            <a href="index.html">
-              <img
-                src="images/Logo.png"
-                alt="Turf Booking System Logo"
-                class="logo"
-              />
-            </a>
-          </td>
-          <td>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="/">Location</a></li>
-                <li><a href="/">Booked Turf</a></li>
-                Modified the user icon with a unique ID for JavaScript
-                <li id="user-icon"><i class="fas fa-user"></i></li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table> -->
-      <a href="index.html">
+      <a href="index.html" class="logo-link">
         <img
           src="images/Logo.png"
           alt="Turf Booking System Logo"
           class="logo"
         />
       </a>
-
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="/">Location</a></li>
           <li><a href="/">History</a></li>
           <li><a href="/">About Us</a></li>
+          <li class="dropdown"></li>
           <li id="user-icon"><i class="fas fa-user"></i></li>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
         </ul>
       </nav>
-      <!-- Navigation Bar -->
-
       <h1>Turf Booking System</h1>
-
       <p>
         Step into a world where your love for sports meets the ease of booking
         with our Turf Booking System. Say goodbye to the complexities of
@@ -78,8 +52,6 @@
 
       <!-- Button -->
       <button type="button">Book Now</button>
-
-      <!-- Footer -->
       <footer>All Rights Reserved @Turf Tribe</footer>
     </div>
   </body>
