@@ -2,70 +2,70 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-image: url("images/Image.jpg"); /* Background Image */
+  background-image: url("images/Image.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
 }
 
 .header-container {
-  text-align: left;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
+.logo-link {
+  display: inline-block;
+}
+
 .logo {
-  max-width: 140px; /* Size of the Logo */
+  max-width: 140px;
   height: auto;
-  position: absolute; /*  Logo Will get placed on right */ 
-  top: 20px;
-  right: 20px;
   cursor: pointer;
-  justify-content: flex-start;
 }
 
 nav {
-  margin-top: 80px; /* Get all text below the logo */
+  text-align: right;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: flex-start;
+  margin: 0;
+  position: absolute;
+  right: 120px; /* Adjust as needed */
+  transform: translateY(-50%); /* Vertical centering */
+  transition: right 0.3s ease; /* Smooth transition for position change */
 }
 
-nav ul li {
-  margin-left: 60px;
-  font-size: 1.4em; /* Adjust the font size for navigation links */
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
 }
 
-nav ul li a {
-  text-decoration: none; /* Remove underline */
-  color: #ffffff; /* Set link color */
-  cursor: pointer;
-  transition: color 0.3s ease; /* Smooth transition effect for color change */
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #7dfd4e; /* Change color on hover */
+.nav-links li a:hover {
+  color: #7dfd4e;
 }
 
 h1 {
-  font-size: 3.5em; /* Increase the font size of the heading */
+  font-size: 3.5em;
   margin-top: 20px;
-  margin-right: 40px; /* Adjust the margin to move it to the right */
 }
 
 p {
-  font-size: 1.5em; /* Increase the font size of the paragraph */
+  font-size: 1.5em;
   margin-top: 20px;
-  margin-right: 40px;
 }
 
 button {
-  font-size: 1.8em; /* Increase the font size of the button */
+  font-size: 1.8em;
   padding: 15px 30px;
   background-color: #7dfd4e;
   border-radius: 12px;
@@ -73,7 +73,7 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 40px;
+  margin-top: 20px;
 }
 
 button:hover {
