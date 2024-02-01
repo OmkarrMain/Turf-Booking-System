@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Turf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cricket.css" />
+    <style>
+      .turf-box {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="available-turf-heading">Available Turf Near You</h2>
+      <div class="search-container">
+        <input type="text" placeholder="Search turf" class="search-bar" />
+        <button class="filter-btn"><i class="fas fa-filter"></i></button>
+      </div>
+      <div class="popup" id="popup"></div>
+    </div>
+    <div class="turf-container">
+      <!-- Boxes with images and content -->
+      <div class="turf-box">
+        <img src="images/cricket.jpg" alt="Image 1" width="100" height="100" />
+        <p>Cricket</p>
+      </div>
+      <div class="turf-box">
+        <img src="images/cricket.jpg" alt="Image 2" width="100" height="100" />
+        <p>Turf 2</p>
+      </div>
+    </div>
+
+    <script>
+      function togglePopup() {
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

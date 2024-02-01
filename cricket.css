@@ -1,0 +1,105 @@
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.available-turf-heading {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search-bar::placeholder {
+  color: #999;
+}
+
+.filter-btn {
+  background-color: greenyellow;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.filter-btn i {
+  margin-right: 5px;
+}
+
+/* Styles for the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.popup.show {
+  display: block;
+}
+
+.turf-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.turf-box {
+  background-color: #adff2f;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.turf-box img {
+  display: block;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.turf-box p {
+  margin: 0;
+}
+.turf-box img:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #999;
+  position: absolute;
+  right: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.turf-info {
+  flex-grow: 1;
+}
+.filter-btn i {
+  color: white;
+}
