@@ -26,3 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdownContent.classList.toggle('show');
     });
 });
+// for drop down animation
+
+document.addEventListener('DOMContentLoaded', function () {
+    const userIcon = document.getElementById('user-icon');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    userIcon.addEventListener('click', function () {
+        dropdownContent.classList.toggle('show');
+    });
+
+    userIcon.addEventListener('mouseenter', function () {
+        dropdownContent.classList.add('show');
+    });
+
+    userIcon.addEventListener('mouseleave', function () {
+        dropdownContent.classList.remove('show');
+    });
+});
+

@@ -14,9 +14,11 @@
     />
     <link rel="stylesheet" href="dropdown.css" />
     <script src="dropdown.js"></script>
+
     <title>Turf Booking System</title>
   </head>
   <body>
+    <!-- Logo Of The Website -->
     <div class="header-container">
       <a href="index.html" class="logo-link">
         <img
@@ -31,7 +33,7 @@
           <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="/">Location</a></li>
           <li><a href="/">History</a></li>
-          <li><a href="/">About Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
           <li class="dropdown"></li>
           <li id="user-icon"><i class="fas fa-user"></i></li>
           <div class="dropdown-content">
@@ -52,7 +54,69 @@
 
       <!-- Button -->
       <button type="button">Book Now</button>
-      <footer>All Rights Reserved @Turf Tribe</footer>
-    </div>
+<!-- Main container for available turf -->
+<div class="main-container">
+  <h2 class="available-turf-heading">Available Turf</h2>
+  <div class="small-box-container">
+    <!-- Small boxes -->
+    <div class="small-box" style="background-image: url('images/cricket.jpg');">
+        <div class="box-text"><a href="cricket.html">Cricket</a></div>
+      </div>
+      <div class="small-box" style="background-image: url('images/tennis.jpg');">
+        <div class="box-text"><a href="tennis.html">Tennis</a></div>
+      </div>
+      <div class="small-box" style="background-image: url('images/football.jpeg');">
+        <div class="box-text"><a href="football.html">Football</a></div>
+      </div>
+      <div class="small-box" style="background-image: url('images/yoga.webp');">
+        <div class="box-text"><a href="yoga.html">Yoga</a></div>
+      </div>
+  </div>
+</div>
+ <!-- <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/turf_logo.png" alt="Turf Logo" class="logo">
+                <div class="customer-support">
+                    <h3>Customer Support</h3>
+                    <ul class="support-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="social-media">
+                    <h3>Connect on Social Media</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                        <li><a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="footer-section">
+                <h3>For Business</h3>
+                <div class="business-actions">
+                    <a href="#" class="business-button">Business Login</a>
+                    <a href="#" class="business-button">Register with Us</a>
+                </div>
+                <div class="business-links">
+                    <a href="#">Advertise with Us</a>
+                    <a href="#">Partnership Form</a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
   </body>
 </html>
