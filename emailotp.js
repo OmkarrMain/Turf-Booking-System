@@ -1,5 +1,6 @@
 function sendOTP() {
     const email = document.getElementById('email');
+    document.write(email.value)
     const otpverify = document.getElementsByClassName('otpverify')[0];
   
     let otp_val = Math.floor(Math.random() * 10000);
