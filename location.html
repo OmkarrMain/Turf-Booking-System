@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Turf Booking</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        height: 80%;
+      }
+
+      #mapOptions {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div id="mapOptions">
+      <button onclick="changeMapView('2d')">2D Map</button>
+      <button onclick="changeMapView('3d')">3D Map</button>
+    </div>
+
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+          mapTypeId: "roadmap", // Default map type
+        });
+      }
+
+      function changeMapView(mapType) {
+        if (mapType === "2d") {
+          map.setMapTypeId("roadmap");
+        } else if (mapType === "3d") {
+          map.setMapTypeId("terrain");
+        }
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css"
+    />
+    <script
+      onload="mapContent();"
+      src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"
+      defer
+    ></script>
+
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 767px) {
+        #map {
+          height: 300px;
+        }
+      }
+
+      #marker {
+        background-image: url("/wp-content/uploads/2021/04/copywriter-logo-dark.svg");
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+
+    <div id="map"></div>
+    <script>
+      function mapContent() {
+        var api_key = "qmyhAeTuQmdt5EhAFtoNUg6TTZ6WRygb";
+        var latAndLong = { lat: 19.098958, lng: 72.851375 };
+        var zoomLevel = 14;
+        var yourAddress =
+          "M L Dahanukar College of Commer Dixit Road, Ville Parle East, Mumbai 400057, Maharashtra";
+
+        var map = tt.map({
+          container: "map",
+          key: api_key,
+          center: latAndLong,
+          zoom: zoomLevel,
+        });
+
+        var marker = new tt.Marker().setLngLat(latAndLong).addTo(map);
+
+        // FOR CUSTOM MARKER
+        //var customMarker = document.createElement('div');
+        //customMarker.id = 'marker';
+        //var marker = new tt.Marker({element: customMarker}).setLngLat(latAndLong).addTo(map);
+
+        var popupOffsets = {
+          top: [0, 0],
+          bottom: [0, -70],
+          "bottom-right": [0, -70],
+          "bottom-left": [0, -70],
+          left: [25, -35],
+          right: [-25, -35],
+        };
+
+        var popup = new tt.Popup({ offset: popupOffsets }).setHTML(yourAddress);
+        marker.setPopup(popup).togglePopup();
+      }
+    </script>
+  </body>
+</html>
