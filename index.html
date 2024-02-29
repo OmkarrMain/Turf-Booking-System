@@ -1,118 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="dropdown.css" />
-    <script src="dropdown.js"></script>
-    <script src="https://kit.fontawesome.com/2d46fd0bd1.js"></script>  <!-- Kit from font awsome  -->
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turf Booking System</title>
-  </head>
-  <body>
-    <!-- Logo Of The Website -->
-    <div class="header-container">
-      <a href="index.html" class="logo-link">
-        <img
-          src="images/Logo.png"
-          alt="Turf Booking System Logo"
-          class="logo"
-        />
-      </a>
-      <nav>
+    <!-- Add your CSS links here -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Add your JavaScript files here -->
+    <script src="dropdown.js"></script>
+    <script src="https://kit.fontawesome.com/2d46fd0bd1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Logo and navigation -->
+<div class="header-container">
+    <a href="index.html" class="logo-link">
+        <img src="images/Logo.png" alt="Turf Booking System Logo" class="logo">
+    </a>
+    <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="location.html">Location</a></li>
-          <li><a href="/">History</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li class="dropdown"></li>
-          <li id="user-icon"><i class="fas fa-user"></i></li>
-          <div class="dropdown-content">
-            <a href="#">Profile</a>
-            <a href="#">Settings</a>
-            <a href="#">Logout</a>
-          </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="/">History</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li class="dropdown"></li>
+            <li id="user-icon"><i class="fas fa-user"></i></li>
+            <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
         </ul>
-      </nav>
-      <h1>Turf Booking System</h1>
-      <p>
+    </nav>
+    <h1>Turf Booking System</h1>
+    <p>
         Step into a world where your love for sports meets the ease of booking
         with our Turf Booking System. Say goodbye to the complexities of
         reserving turf spaces and hello to a seamless, efficient experience
         tailored just for you. Ready to redefine how you play? Let's get
         started!
-      </p>
-
-      <!-- Button -->
-      <button type="button">Book Now</button>
+    </p>
+    <!-- Button -->
+    <button type="button">Book Now</button>
+</div>
 <!-- Main container for available turf -->
 <div class="main-container">
-  <h2 class="available-turf-heading">Available Turf</h2>
-  <div class="small-box-container">
-    <!-- Small boxes -->
-    <div class="small-box" style="background-image: url('images/cricket.jpg');">
-        <div class="box-text"><a href="cricket.html">Cricket</a></div>
-      </div>
-      <div class="small-box" style="background-image: url('images/tennis.jpg');">
-        <div class="box-text"><a href="tennis.html">Tennis</a></div>
-      </div>
-      <div class="small-box" style="background-image: url('images/football.jpeg');">
-        <div class="box-text"><a href="football.html">Football</a></div>
-      </div>
-      <div class="small-box" style="background-image: url('images/yoga.webp');">
-        <div class="box-text"><a href="yoga.html">Yoga</a></div>
-      </div>
-  </div>
+    <h2 class="available-turf-heading">Available Turf</h2>
+    <div class="small-box-container">
+        <!-- Small boxes -->
+        <div class="small-box" style="background-image: url('images/cricket.jpg');">
+            <div class="box-text"><a href="cricket.html">Cricket</a></div>
+        </div>
+        <div class="small-box" style="background-image: url('images/tennis.jpg');">
+            <div class="box-text"><a href="tennis.html">Tennis</a></div>
+        </div>
+        <div class="small-box" style="background-image: url('images/football.jpeg');">
+            <div class="box-text"><a href="football.html">Football</a></div>
+        </div>
+        <div class="small-box" style="background-image: url('images/yoga.webp');">
+            <div class="box-text"><a href="yoga.html">Yoga</a></div>
+        </div>
+    </div>
 </div>
 <footer>
-  <div class="row">
-    <div class="col">
-      <img src="images/Logo.png" class="logo1">
-      <p>Explore our turf booking platform to effortlessly reserve your spot on the field. Whether it's for a casual game with friends or a competitive match, we've got you covered. Experience convenience and flexibility in turf booking like never before. Join us today and elevate your playing experience!
-      </p>
+    <div class="row">
+        <div class="col">
+            <img src="images/Logo.png" class="logo1">
+            <p>Explore our turf booking platform to effortlessly reserve your spot on the field. Whether it's for a casual game with friends or a competitive match, we've got you covered. Experience convenience and flexibility in turf booking like never before. Join us today and elevate your playing experience!
+            </p>
+        </div>
+        <div class="col">
+            <h3>Contact US <div class="underline"><span></span></div></h3>
+            <p class="email-id">tribeturf@gmail.com</p>
+            <h4>+91 - 7738341059</h4>
+        </div>
+        <div class="col">
+            <h3>Links<div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Locations</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter<div class="underline"><span></span></div></h3>
+            <form>
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></a></i>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></a></i>
+                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></a></i>
+                <a href="https://www.discord.com/"><i class="fa-brands fa-discord"></a></i>
+            </div>
+        </div>
     </div>
-    <div class="col">
-      <h3>Contact US <div class="underline"><span></span></div></h3>
-      <p class="email-id">tribeturf@gmail.com</p>
-      <h4>+91 - 7738341059</h4>
-    </div>
-    <div class="col">
-      <h3>Links<div class="underline"><span></span></div></h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Locations</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-      </ul>
-    </div>
-    <div class="col">
-      <h3>Newsletter<div class="underline"><span></span></div></h3>
-      <form>
-        <i class="fa-regular fa-envelope"></i>
-        <input type="email" placeholder="Enter your email id" required>
-        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-      </form>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></a></i>
-        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></a></i>
-        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></a></i>
-        <a href="https://www.discord.com/"><i class="fa-brands fa-discord"></a></i>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <p class="copyright">Turf Tribe @ 2024 - All Rights Reseverd</p>
+    <hr>
+    <p class="copyright">Turf Tribe @ 2024 - All Rights Reserved</p>
 </footer>
 
-  </body>
+<!-- Add your JavaScript code here -->
+<script>
+// Function to prompt user for location permission
+function promptForLocation() {
+    var allowLocation = confirm("Do you want to allow this website to know your location?");
+    if (allowLocation) {
+        detectUserLocation();
+    }
+}
+
+// Function to detect user's location using Geolocation API
+function detectUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                var locationText = "Latitude: " + latitude + ", Longitude: " + longitude;
+                // Update location in navigation bar
+                document.getElementById('location').innerText = locationText;
+            },
+            function(error) {
+                console.error('Error getting user location:', error);
+            }
+        );
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+}
+
+// Event listener for page load
+window.onload = function() {
+    promptForLocation();
+};
+</script>
+</body>
 </html>
