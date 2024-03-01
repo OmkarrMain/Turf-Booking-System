@@ -213,7 +213,7 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
-  background: rgb(160, 152, 152);
+  background: #bcbcbc;
   color: #0e0e0e;
   padding: 100px 0 30px;
   border-top-left-radius: 125px;
@@ -241,7 +241,7 @@ footer {
 }
 /* Even Margin */
 .logo1 {
-  width: 80px;
+  width: 140px;
   margin-bottom: 30px;
 }
 
