@@ -17,3 +17,6 @@ api_key = "qmyhAeTuQmdt5EhAFtoNUg6TTZ6WRygb"
 
 Docker ID and Pass :-
 docker run -d -p 8880:3306 --name mysql_turf_container -e MYSQL_ROOT_PASSWORD=omkarr -e MYSQL_DATABASE=turf_app -e MYSQL_USER=root -e MYSQL_PASSWORD=omkarr mysql/mysql-server:latest
+
+Google Maps APi Key :-
+"AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go"
