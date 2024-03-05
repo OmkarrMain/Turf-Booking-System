@@ -7,18 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     //"Sign Up" link
     const signUpLink = document.createElement('a');
-    signUpLink.href = 'signup.html';
+    signUpLink.href = 'signinreg.html';
     signUpLink.innerText = 'Register';
-    
-    // "Sign In" link
-    const signInLink = document.createElement('a');
-    signInLink.href = 'signin.html'; 
-    signInLink.innerText = 'Login';
     
     // Append links to the dropdown content
     dropdownContent.appendChild(signUpLink);
-    dropdownContent.appendChild(signInLink);
-    
     // Append dropdown content to the user icon
     userIcon.appendChild(dropdownContent);
 
