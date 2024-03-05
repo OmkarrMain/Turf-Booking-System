@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turf Booking</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go&libraries=places&callback=initMap"
+    ></script>
+    <script>
+      var map;
+      var service;
+      var infowindow;
+      function initialize(){
+        var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316)
+        map = new google.maps.Map(document.getElementById('map'),{
+          center:pyrmont,
+          zoom:15
+        })
+
+        var input = document.getElementById('searchTextField');
+
+        let autocomplete = new google.maps.places.Autocomplete(input)
+
+        autocomplete.bindTo('bounds',map)
+
+        let marker = new google.maps.Marker({
+          map:map
+        })
+
+        google.maps.event.addListener(autocomplete,'place_changed',() => {
+          let place = autocomplete.getPlace()
+            console.log(place)
+            console.log(place.photos[0].getUrl())
+
+            if(place.geometry.viewport){
+              map.fitBounds(place.geometry.viewport)
+            }
+            else{
+              map.setCenter(place.geometry.location)
+              map.setZoom(17)
+            }
+            marker.setPosition(place.geometry.location)
+            marker.setVisible(true)
+
+            let request = {
+    location: new google.maps.LatLng(lat, lng), // User's latitude and longitude
+    radius: '500', // Search within 500 meters
+    query: 'turf', // Basic query
+    types: ['establishment'], // Filter results to establishments
+    keyword: 'sports', // Additional keyword to refine the search
+    openNow: true // Optionally, only show places that are open now
+};
+
+
+            service = new google.maps.places.PlacesService(map)
+            service.nearbySearch(request, callback)
+
+        })
+
+      }
+
+      function callback(results,status){
+        if(status == google.maps.places.PlacesServiceStatus.OK){
+          for(var i = 0; i < results.lenght; i++){
+            var place = results[i];
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(places){
+        var marker = new google.maps.Marker({
+          map:map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function(){
+          alert(place.name);
+          window.open(place.photos[0].getUrl(), "_blank");
+        })
+      }
+      google.maps.event.addDomListener(window,'load',initialize)
+    </script>
+    <body>
+  <input id="searchTextField" type="text" size="50"></input>
+  <div id="map" style="height:500px;"></div>
+</body>
+</html>
+
+<!--  # Search for nearby turfs
+        turfs = search_nearby_turfs(user_location)
+        if turfs:
+            print("Nearby turfs:")
+            # Create a map centered at the user's location
+            turf_map = folium.Map(location=user_location, zoom_start=15)
+            
+            # Add markers for each nearby turf
+            for turf in turfs:
+                turf_location = (turf['geometry']['location']['lat'], turf['geometry']['location']['lng'])
+                folium.Marker(location=turf_location, popup=turf['name']).add_to(turf_map)
+
+            # Save the map as an HTML file
+            turf_map.save('nearby_turfs_map.html')
+            print("Map saved as nearby_turfs_map.html")
+        else:
+            print("No nearby turfs found.")
+    else:
+        print("Unable to determine user location.") -->
