@@ -1,1 +1,203 @@
-<p>Haale luya</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #bdedc2; /* Light green background color */
+            position: relative; /* Add position relative to body */
+        }
+
+        .searchBox {
+            display: flex;
+            align-items: center;
+            margin-top: 100px; /* Add margin-top to create space between back button and search box */
+        }
+
+        #searchInput {
+            padding: 8px;
+            margin-right: 10px;
+            width: 400px; /* Increased width for the search box */
+        }
+
+        .searchIcon,
+        .filterButton {
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .searchIcon:hover,
+        .filterButton:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+
+        .filterButton {
+            margin-left: 5px; /* Add margin between search icon and filter button */
+        }
+
+        .button {
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+
+        #backButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px;
+            background-color: #ccc;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        #backButton:hover {
+            background-color: #838588; /* Change background color on hover */
+        }
+
+        .container {
+            margin-top: 20px;
+            padding: 75px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 80%;
+            max-width: 1000px; /* Increased maximum width */
+            position: relative; /* Add position relative to container */
+        }
+
+        .smallContainer {
+            width: 230px; /* Adjust the width as needed */
+            height: 120px; /* Adjust the height as needed */
+            background-color: rgb(178, 184, 186); /* Example background color */
+            position: absolute; /* Position it absolutely within the main container */
+            top: 20px; /* Adjust the top position as needed */
+            left: 20px; /* Adjust the left position as needed */
+            background-size: cover; /* Ensure the background image covers the container */
+            background-position: center; /* Center the background image */
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .smallContainer:hover {
+            background-color: rgba(67, 65, 65, 0.467); /* Semi-transparent background on hover */
+        }
+
+        .smallContainer:hover::after {
+            content: attr(data-text); /* Display the data-text attribute as content */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+
+        .moreOptionsButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .moreOptionsButton:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+
+        .container img {
+            display: none; /* Hide the image */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="backButton" class="button"><i class="fas fa-arrow-left"></i></button>
+    
+    <div class="searchBox">
+        <input type="text" id="searchInput" placeholder="Search for Turfs">
+        <!-- Use the <i> tag for Font Awesome icons -->
+        <button id="filterButton" class="searchIcon"><i class="fas fa-search"></i></button>
+        <button id="filterButton" class="filterButton"><i class="fas fa-filter"></i></button>
+    </div>
+
+    <!-- Container 1 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Football" style="background-image: url('images/footdash');"></div> <!-- Image set as background -->
+    </div>
+
+    <!-- Container 2 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Badmiton" style="background-image: url('images/badmintondash.jpg');"></div> <!-- Image set as background -->
+        Container 2
+    </div>
+
+    <!-- Container 3 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Cricket" style="background-image: url('images/cricketdash.jpeg');"></div> <!-- Image set as background -->
+        Container 3
+    </div>
+
+    <!-- Container 4 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Hockey" style="background-image: url('images/hockeydash');"></div> <!-- Image set as background -->
+        Container 4
+    </div>
+
+    <!-- Container 5 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Rugby" style="background-image: url('images/rugbydash.jpg');"></div> <!-- Image set as background -->
+        Container 5
+    </div>
+
+    <!-- Container 6 -->
+    <div class="container">
+        <button class="moreOptionsButton"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="smallContainer" data-text="Swimming" style="background-image: url('images/pooldash.webp');"></div> <!-- Image set as background -->
+        Container 6
+    </div>
+
+
+    <!-- Other content of the dashboard goes here -->
+
+</body>
+
+</html>
