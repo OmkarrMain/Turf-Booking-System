@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turf Booking Dashboard</title>
+    <link rel="stylesheet" href="../static/css/slotbooking.css" />
+    <!-- Add Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Turf Booking Dashboard</h1>
+      <form action="#" class="form" id="availabilityForm">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" class="input-field" />
+        <button type="submit" class="btn">Check Availability</button>
+      </form>
+      <div class="availability" id="availabilitySlots">
+        <h2>Available Slots</h2>
+        <ul class="list" id="availableSlotsList"></ul>
+      </div>
+      <div class="booking-form">
+        <h2>Book a Slot</h2>
+        <form action="#" class="form">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="input-field"
+          />
+          <label for="slot">Select Slot:</label>
+          <select id="slot" name="slot" class="input-field">
+            <option value="Slot 1">Slot 1: 10:00 AM - 12:00 PM</option>
+            <option value="Slot 2">Slot 2: 01:00 PM - 03:00 PM</option>
+            <option value="Slot 3">Slot 3: 04:00 PM - 06:00 PM</option>
+          </select>
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("availabilityForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Simulating API call to fetch available slots
+          setTimeout(function () {
+            var availableSlots = [
+              "Slot 1: 10:00 AM - 12:00 PM",
+              "Slot 2: 01:00 PM - 03:00 PM",
+              "Slot 3: 04:00 PM - 06:00 PM",
+            ];
+            displayAvailableSlots(availableSlots);
+          }, 1000); // Simulating delay
+
+          // Add animation when checking availability
+          var availabilitySlots = document.getElementById("availabilitySlots");
+          availabilitySlots.style.animation = "fadeIn 1s ease-out";
+        });
+
+      function displayAvailableSlots(slots) {
+        var availableSlotsList = document.getElementById("availableSlotsList");
+        availableSlotsList.innerHTML = ""; // Clear previous slots
+
+        slots.forEach(function (slot) {
+          var li = document.createElement("li");
+          li.textContent = slot;
+          availableSlotsList.appendChild(li);
+        });
+      }
+    </script>
+  </body>
+</html>

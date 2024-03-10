@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bdedc2; /* Light green background color */
+  position: relative; /* Add position relative to body */
+}
+
+/* Add watermark image */
+body::before {
+  content: "";
+  background-image: url("images/Logo.png"); /* Replace 'your-image-url.jpg' with the path to your image */
+  opacity: 0.5; /* Adjust the opacity as needed */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1; /* Ensure it's behind other elements */
+  pointer-events: none; /* Make sure it doesn't interfere with clicks */
+  background-size: contain; /* Scale the background image to contain within the body */
+  background-position: center; /* Position the background image at the center */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  margin-top: 100px; /* Add margin-top to create space between back button and search box */
+}
+
+#searchInput {
+  padding: 8px;
+  margin-right: 10px;
+  width: 400px; /* Increased width for the search box */
+}
+
+.searchIcon,
+.filterButton {
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.searchIcon:hover,
+.filterButton:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+.filterButton {
+  margin-left: 5px; /* Add margin between search icon and filter button */
+}
+
+.button {
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+#backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+#backButton:hover {
+  background-color: #838588; /* Change background color on hover */
+}
+
+.container {
+  margin-top: 20px;
+  padding: 75px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 80%;
+  max-width: 1000px; /* Increased maximum width */
+  position: relative; /* Add position relative to container */
+  display: block; /* Initially set to display block */
+}
+
+.smallContainer {
+  width: 230px; /* Adjust the width as needed */
+  height: 120px; /* Adjust the height as needed */
+  background-color: rgb(178, 184, 186); /* Example background color */
+  position: absolute; /* Position it absolutely within the main container */
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  background-size: cover; /* Ensure the background image covers the container */
+  background-position: center; /* Center the background image */
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.smallContainer:hover {
+  background-color: rgba(
+    67,
+    65,
+    65,
+    0.467
+  ); /* Semi-transparent background on hover */
+}
+
+.smallContainer:hover::after {
+  content: attr(data-text); /* Display the data-text attribute as content */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.moreOptionsButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.moreOptionsButton:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+.floatingButtons {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: -90px; /* Adjust the position as needed */
+  background-color: #bdedc2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.floatingButtons:hover {
+  background-color: #494949; /* Change background color on hover */
+}
+
+.floatingButtons button {
+  display: block;
+  margin-bottom: 10px; /* Add margin between buttons */
+}
+
+.container img {
+  display: none; /* Hide the image */
+}
+
+/* Style for filter options container */
+.filterOptionsContainer {
+  display: none; /* Initially hide */
+  position: absolute;
+  top: 100px; /* Adjust as needed */
+  left: 1010px; /* Adjust as needed */
+  background-color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  z-index: 999; /* Ensure it's above other elements */
+  max-height: 150px; /* Set maximum height */
+  overflow-y: auto; /* Add scrollbar */
+}
+
+.filterOptionsContainer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filterOptionsContainer input[type="radio"] {
+  margin-right: 5px;
+}

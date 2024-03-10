@@ -21,5 +21,6 @@ docker run -d -p 8880:3306 --name mysql_turf_container -e MYSQL_ROOT_PASSWORD=om
 Google Maps APi Key :-
 "AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go"
 
-
-okok
+Mongo DB Atlas:
+username : omkarr
+password : Omkar786

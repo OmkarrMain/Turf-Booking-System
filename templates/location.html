@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_76f03f38f50ea601b69cb5fc31a3d835 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_76f03f38f50ea601b69cb5fc31a3d835" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_76f03f38f50ea601b69cb5fc31a3d835 = L.map(
+                "map_76f03f38f50ea601b69cb5fc31a3d835",
+                {
+                    center: [19.0977368, 72.863352],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6fc774daa5af4eb53e1e8530bdbb16cc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6fc774daa5af4eb53e1e8530bdbb16cc.addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+            var marker_ec94b1ba1a9007bc294817726e14d4f2 = L.marker(
+                [19.109133, 72.8835579],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_488f752a00d82bba6e51ce9d602cb7e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ee6d3798d1201a4558f232b975c76dc = $(`<div id="html_5ee6d3798d1201a4558f232b975c76dc" style="width: 100.0%; height: 100.0%;">Five Nine Turf</div>`)[0];
+                popup_488f752a00d82bba6e51ce9d602cb7e8.setContent(html_5ee6d3798d1201a4558f232b975c76dc);
+            
+        
+
+        marker_ec94b1ba1a9007bc294817726e14d4f2.bindPopup(popup_488f752a00d82bba6e51ce9d602cb7e8)
+        ;
+
+        
+    
+    
+            var marker_fdcb4e20f30246e2416abe44b1a46895 = L.marker(
+                [19.114688, 72.8888645],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_e21d3b5383a460e0db6d8e92f4a7cd64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b81da4650e1435ce949c9777d3105e0 = $(`<div id="html_6b81da4650e1435ce949c9777d3105e0" style="width: 100.0%; height: 100.0%;">Green Spaces Turf</div>`)[0];
+                popup_e21d3b5383a460e0db6d8e92f4a7cd64.setContent(html_6b81da4650e1435ce949c9777d3105e0);
+            
+        
+
+        marker_fdcb4e20f30246e2416abe44b1a46895.bindPopup(popup_e21d3b5383a460e0db6d8e92f4a7cd64)
+        ;
+
+        
+    
+    
+            var marker_48652a6aedcd19d59f97b34d12d93835 = L.marker(
+                [19.1117971, 72.8879259],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_9915b7e35712ab61033c5e3a843f017e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8567f5ea95c84f899f211ddecb01bc4 = $(`<div id="html_d8567f5ea95c84f899f211ddecb01bc4" style="width: 100.0%; height: 100.0%;">Infinity Sports Turf</div>`)[0];
+                popup_9915b7e35712ab61033c5e3a843f017e.setContent(html_d8567f5ea95c84f899f211ddecb01bc4);
+            
+        
+
+        marker_48652a6aedcd19d59f97b34d12d93835.bindPopup(popup_9915b7e35712ab61033c5e3a843f017e)
+        ;
+
+        
+    
+    
+            var marker_4e4790b9aeab79c7627ed4288dd12925 = L.marker(
+                [19.0772378, 72.8730818],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_0b6d1b7eb2a8adffe10878181a9959f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f03ea5e7fd81074c1d45b421e877fb4 = $(`<div id="html_2f03ea5e7fd81074c1d45b421e877fb4" style="width: 100.0%; height: 100.0%;">Gurunanak Sports Turf</div>`)[0];
+                popup_0b6d1b7eb2a8adffe10878181a9959f0.setContent(html_2f03ea5e7fd81074c1d45b421e877fb4);
+            
+        
+
+        marker_4e4790b9aeab79c7627ed4288dd12925.bindPopup(popup_0b6d1b7eb2a8adffe10878181a9959f0)
+        ;
+
+        
+    
+    
+            var marker_71844a493d5deee73726f462a027a1d0 = L.marker(
+                [19.0766511, 72.8848726],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_bf06d7b2930111a397ba2d1d4a77e1a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a01901679e689861cfc20fbc8b02a859 = $(`<div id="html_a01901679e689861cfc20fbc8b02a859" style="width: 100.0%; height: 100.0%;">GreenField Sports Turf</div>`)[0];
+                popup_bf06d7b2930111a397ba2d1d4a77e1a4.setContent(html_a01901679e689861cfc20fbc8b02a859);
+            
+        
+
+        marker_71844a493d5deee73726f462a027a1d0.bindPopup(popup_bf06d7b2930111a397ba2d1d4a77e1a4)
+        ;
+
+        
+    
+    
+            var marker_29f2081cb21ca8294dcd093a9812f929 = L.marker(
+                [19.1014157, 72.88228579999999],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_68e5fd6d5e55ca0c0658a16fb87a1eb8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9782ab750c86be39109427d738cb9f52 = $(`<div id="html_9782ab750c86be39109427d738cb9f52" style="width: 100.0%; height: 100.0%;">FALAH SPORTS & TURF</div>`)[0];
+                popup_68e5fd6d5e55ca0c0658a16fb87a1eb8.setContent(html_9782ab750c86be39109427d738cb9f52);
+            
+        
+
+        marker_29f2081cb21ca8294dcd093a9812f929.bindPopup(popup_68e5fd6d5e55ca0c0658a16fb87a1eb8)
+        ;
+
+        
+    
+    
+            var marker_579ad96001b900f17dced1c5ef75f419 = L.marker(
+                [19.1378337, 72.8460126],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_1eb8f011f0ce6c09ec70563fd8dcabac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b74238d1c4687f0ae0a87c7947da0f95 = $(`<div id="html_b74238d1c4687f0ae0a87c7947da0f95" style="width: 100.0%; height: 100.0%;">Greatest of all turf - Best Turf In Mumbai</div>`)[0];
+                popup_1eb8f011f0ce6c09ec70563fd8dcabac.setContent(html_b74238d1c4687f0ae0a87c7947da0f95);
+            
+        
+
+        marker_579ad96001b900f17dced1c5ef75f419.bindPopup(popup_1eb8f011f0ce6c09ec70563fd8dcabac)
+        ;
+
+        
+    
+    
+            var marker_49eb7e5c2a2d4f516008720c4a18e242 = L.marker(
+                [19.1224398, 72.8627496],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_0a34afd406e2a7cd73b152c0c3e52df7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d850e25c143a05aa248e602677144c81 = $(`<div id="html_d850e25c143a05aa248e602677144c81" style="width: 100.0%; height: 100.0%;">Players Turf, Mahakali Caves</div>`)[0];
+                popup_0a34afd406e2a7cd73b152c0c3e52df7.setContent(html_d850e25c143a05aa248e602677144c81);
+            
+        
+
+        marker_49eb7e5c2a2d4f516008720c4a18e242.bindPopup(popup_0a34afd406e2a7cd73b152c0c3e52df7)
+        ;
+
+        
+    
+    
+            var marker_52ec9300252888292c60c555e4ae8b40 = L.marker(
+                [19.0564147, 72.8271414],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_51f930134fe2a95e5db19d1348dd5c6f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a231bbacf7e841f9071439a2d477ba42 = $(`<div id="html_a231bbacf7e841f9071439a2d477ba42" style="width: 100.0%; height: 100.0%;">St. Andrews TurfPark</div>`)[0];
+                popup_51f930134fe2a95e5db19d1348dd5c6f.setContent(html_a231bbacf7e841f9071439a2d477ba42);
+            
+        
+
+        marker_52ec9300252888292c60c555e4ae8b40.bindPopup(popup_51f930134fe2a95e5db19d1348dd5c6f)
+        ;
+
+        
+    
+    
+            var marker_aedf6655f21a55a89110834ef20d9ae2 = L.marker(
+                [19.074755, 72.8864035],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_1f12ad69c35d7c5e5372d94e9a717fb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c253d2d8dfee7b0c843026f64b3226c = $(`<div id="html_6c253d2d8dfee7b0c843026f64b3226c" style="width: 100.0%; height: 100.0%;">TurfPark Kurla</div>`)[0];
+                popup_1f12ad69c35d7c5e5372d94e9a717fb2.setContent(html_6c253d2d8dfee7b0c843026f64b3226c);
+            
+        
+
+        marker_aedf6655f21a55a89110834ef20d9ae2.bindPopup(popup_1f12ad69c35d7c5e5372d94e9a717fb2)
+        ;
+
+        
+    
+    
+            var marker_7bda6780c8dbc0757cb5f7c28d5d927b = L.marker(
+                [19.1075899, 72.8892328],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_6c567dc941b915649c8cb5a3457d4c5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b81c7f04e6217e6e179ea48b6c91a42 = $(`<div id="html_6b81c7f04e6217e6e179ea48b6c91a42" style="width: 100.0%; height: 100.0%;">Players Turf At Sakinaka</div>`)[0];
+                popup_6c567dc941b915649c8cb5a3457d4c5c.setContent(html_6b81c7f04e6217e6e179ea48b6c91a42);
+            
+        
+
+        marker_7bda6780c8dbc0757cb5f7c28d5d927b.bindPopup(popup_6c567dc941b915649c8cb5a3457d4c5c)
+        ;
+
+        
+    
+    
+            var marker_57ff3e4bc6a5d9caa715ecbf12e54b97 = L.marker(
+                [19.1166729, 72.8264688],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_084171d16e1c4ca3352c7eaa77f13042 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7e4c8c0064afd5776fdddfeee3c3a46 = $(`<div id="html_a7e4c8c0064afd5776fdddfeee3c3a46" style="width: 100.0%; height: 100.0%;">OM ASTRO TURF</div>`)[0];
+                popup_084171d16e1c4ca3352c7eaa77f13042.setContent(html_a7e4c8c0064afd5776fdddfeee3c3a46);
+            
+        
+
+        marker_57ff3e4bc6a5d9caa715ecbf12e54b97.bindPopup(popup_084171d16e1c4ca3352c7eaa77f13042)
+        ;
+
+        
+    
+    
+            var marker_7522b65d521d878ec6d4ffe904ffedca = L.marker(
+                [19.0511649, 72.86327399999999],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_89fb7bba6e80bcd13e703a9d695b8e12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abd1dd5a4094a78a8c7fb04c4c91b230 = $(`<div id="html_abd1dd5a4094a78a8c7fb04c4c91b230" style="width: 100.0%; height: 100.0%;">Crickshot Sports Turf Arena sion dharavi</div>`)[0];
+                popup_89fb7bba6e80bcd13e703a9d695b8e12.setContent(html_abd1dd5a4094a78a8c7fb04c4c91b230);
+            
+        
+
+        marker_7522b65d521d878ec6d4ffe904ffedca.bindPopup(popup_89fb7bba6e80bcd13e703a9d695b8e12)
+        ;
+
+        
+    
+    
+            var marker_70a7bf588537a6c9b38bc860683e1f54 = L.marker(
+                [19.077947, 72.856993],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_5621dd1e1f288f46de562bf315f19c5f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d9d19d69e2662e97575c9986afd8c3f = $(`<div id="html_4d9d19d69e2662e97575c9986afd8c3f" style="width: 100.0%; height: 100.0%;">Sportzella Turf</div>`)[0];
+                popup_5621dd1e1f288f46de562bf315f19c5f.setContent(html_4d9d19d69e2662e97575c9986afd8c3f);
+            
+        
+
+        marker_70a7bf588537a6c9b38bc860683e1f54.bindPopup(popup_5621dd1e1f288f46de562bf315f19c5f)
+        ;
+
+        
+    
+    
+            var marker_772abd8285abcc97bbdb86c522c3fcc5 = L.marker(
+                [19.1112824, 72.9044187],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_2918ed5011f5db1cea03a8e4996cbeb4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0df2f0f50e769bcab1cd0a937f0120dd = $(`<div id="html_0df2f0f50e769bcab1cd0a937f0120dd" style="width: 100.0%; height: 100.0%;">PLAYERS TURF-PPS CHANDIVALI</div>`)[0];
+                popup_2918ed5011f5db1cea03a8e4996cbeb4.setContent(html_0df2f0f50e769bcab1cd0a937f0120dd);
+            
+        
+
+        marker_772abd8285abcc97bbdb86c522c3fcc5.bindPopup(popup_2918ed5011f5db1cea03a8e4996cbeb4)
+        ;
+
+        
+    
+    
+            var marker_04f56384e6bf4bf16a2a977e46571c20 = L.marker(
+                [19.1022789, 72.8859228],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_5f13f5b7e7379ffaf081908f284f08ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04319127cb472cf458da32467ea936f8 = $(`<div id="html_04319127cb472cf458da32467ea936f8" style="width: 100.0%; height: 100.0%;">Players Turf At Saki Naka (Sagar Tech Plaza)</div>`)[0];
+                popup_5f13f5b7e7379ffaf081908f284f08ed.setContent(html_04319127cb472cf458da32467ea936f8);
+            
+        
+
+        marker_04f56384e6bf4bf16a2a977e46571c20.bindPopup(popup_5f13f5b7e7379ffaf081908f284f08ed)
+        ;
+
+        
+    
+    
+            var marker_a5da8605a4a467207253f40582672afd = L.marker(
+                [19.0561406, 72.9042177],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_9a4ea752ce6885d0379dfe43230f9d1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ed72f87cee87784c32b97864ac31ad4 = $(`<div id="html_3ed72f87cee87784c32b97864ac31ad4" style="width: 100.0%; height: 100.0%;">Green Pitch Turf</div>`)[0];
+                popup_9a4ea752ce6885d0379dfe43230f9d1d.setContent(html_3ed72f87cee87784c32b97864ac31ad4);
+            
+        
+
+        marker_a5da8605a4a467207253f40582672afd.bindPopup(popup_9a4ea752ce6885d0379dfe43230f9d1d)
+        ;
+
+        
+    
+    
+            var marker_e6a98b9cc4c5f30efc3525da53f02bac = L.marker(
+                [19.0517017, 72.833924],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_c3ec5895a069c31027ce6eadb30d7f6b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_005a2aa702aafa8674051b557796ddb4 = $(`<div id="html_005a2aa702aafa8674051b557796ddb4" style="width: 100.0%; height: 100.0%;">SportingLions Foundation Sports turf</div>`)[0];
+                popup_c3ec5895a069c31027ce6eadb30d7f6b.setContent(html_005a2aa702aafa8674051b557796ddb4);
+            
+        
+
+        marker_e6a98b9cc4c5f30efc3525da53f02bac.bindPopup(popup_c3ec5895a069c31027ce6eadb30d7f6b)
+        ;
+
+        
+    
+    
+            var marker_551359ad98fa2ac2316ca1087f5151c3 = L.marker(
+                [19.0572003, 72.83039289999999],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_e5c071f37db70b6ceaa9d7b3b1a5e8c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2cc821f769a7e7d087da8c84b431d60 = $(`<div id="html_e2cc821f769a7e7d087da8c84b431d60" style="width: 100.0%; height: 100.0%;">St. Josephs Turf</div>`)[0];
+                popup_e5c071f37db70b6ceaa9d7b3b1a5e8c6.setContent(html_e2cc821f769a7e7d087da8c84b431d60);
+            
+        
+
+        marker_551359ad98fa2ac2316ca1087f5151c3.bindPopup(popup_e5c071f37db70b6ceaa9d7b3b1a5e8c6)
+        ;
+
+        
+    
+    
+            var marker_8c3495eddafc1b9355a1ec7f81a7fd60 = L.marker(
+                [19.0774584, 72.8677278],
+                {}
+            ).addTo(map_76f03f38f50ea601b69cb5fc31a3d835);
+        
+    
+        var popup_af4b9ca907e5216173c87a0be51062c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c34be67d344379fb1a5fc56f8fef6556 = $(`<div id="html_c34be67d344379fb1a5fc56f8fef6556" style="width: 100.0%; height: 100.0%;">Unitedcity Football Turf</div>`)[0];
+                popup_af4b9ca907e5216173c87a0be51062c9.setContent(html_c34be67d344379fb1a5fc56f8fef6556);
+            
+        
+
+        marker_8c3495eddafc1b9355a1ec7f81a7fd60.bindPopup(popup_af4b9ca907e5216173c87a0be51062c9)
+        ;
+
+        
+    
+</script>
+</html>

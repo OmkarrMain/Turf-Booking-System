@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Add Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+  </head>
+
+  <body>
+    <button id="backButton" class="button">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="searchBox">
+      <input type="text" id="searchInput" placeholder="Search for Turfs" />
+      <!-- Use the <i> tag for Font Awesome icons -->
+      <button id="searchButton" class="searchIcon">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="filterButton" class="filterButton">
+        <i class="fas fa-filter"></i>
+      </button>
+    </div>
+
+    <!-- Container 1 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Football"
+        style="background-image: url('../static/images/footdash')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Container 2 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Badminton"
+        style="background-image: url('../static/images/badmintondash.jpg')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Container 3 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Cricket"
+        style="background-image: url('../static/images/cricketdash.jpeg')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Container 4 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Hockey"
+        style="background-image: url('../static/images/hockeydash')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Container 5 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Rugby"
+        style="background-image: url('../static/images/rugbydash.jpg')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Container 6 -->
+    <div class="container">
+      <button class="moreOptionsButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <div class="floatingButtons">
+        <button>View</button>
+        <button><i class="fas fa-bookmark"></i></button>
+      </div>
+      <div
+        class="smallContainer"
+        data-text="Swimming"
+        style="background-image: url('../static/images/pooldash.webp')"
+      ></div>
+      <!-- Image set as background -->
+    </div>
+
+    <!-- Filter options container -->
+    <div class="filterOptionsContainer">
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option1"
+          onclick="filterTurf('Football')"
+        />Football</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option2"
+          onclick="filterTurf('Cricket')"
+        />Cricket</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option3"
+          onclick="filterTurf('Tennis')"
+        />Tennis</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option4"
+          onclick="filterTurf('Badminton')"
+        />Badminton</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option5"
+          onclick="filterTurf('Yoga')"
+        />Yoga</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option6"
+          onclick="filterTurf('Swimming')"
+        />Swimming</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option7"
+          onclick="filterTurf('Rugby')"
+        />Rugby</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="filter"
+          value="option8"
+          onclick="filterTurf('Hockey')"
+        />Hockey</label
+      >
+    </div>
+
+    <!-- Other content of the dashboard goes here -->
+
+    <script src="../static/js/dashboard.js"></script>
+  </body>
+</html>

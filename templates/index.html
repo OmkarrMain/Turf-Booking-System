@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turf Booking System</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Logo and navigation -->
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img
+          src="../static/images/Logo.png"
+          alt="Turf Booking System Logo"
+          class="logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/location">Location</a></li>
+          <li><a href="/">History</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li class="dropdown"></li>
+          <li id="user-icon"><i class="fas fa-user"></i></li>
+        </ul>
+      </nav>
+      <h1>Turf Booking System</h1>
+      <p>
+        Step into a world where your love for sports meets the ease of booking
+        with our Turf Booking System. Say goodbye to the complexities of
+        reserving turf spaces and hello to a seamless, efficient experience
+        tailored just for you. Ready to redefine how you play? Let's get
+        started!
+      </p>
+      <!-- Button -->
+      <button type="button">Book Now</button>
+    </div>
+    <!-- Main container for available turf -->
+    <div class="main-container">
+      <h2 class="available-turf-heading">Available Turf</h2>
+      <div class="small-box-container">
+        <!-- Small boxes -->
+        <div
+          class="small-box"
+          style="background-image: url('../static/images/cricket.jpg')"
+        >
+          <div class="box-text"><a href="/cricket">Cricket</a></div>
+        </div>
+        <div
+          class="small-box"
+          style="background-image: url('../static/images/tennis.jpg')"
+        >
+          <div class="box-text"><a href="/tennis">Tennis</a></div>
+        </div>
+        <div
+          class="small-box"
+          style="background-image: url('../static/images/football.jpeg')"
+        >
+          <div class="box-text"><a href="/football">Football</a></div>
+        </div>
+        <div
+          class="small-box"
+          style="background-image: url('../static/images/yoga.webp')"
+        >
+          <div class="box-text"><a href="/yoga">Yoga</a></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="../static/images/Logo.png" class="logo1" />
+          <p>
+            Explore our turf booking platform to effortlessly reserve your spot
+            on the field. Whether it's for a casual game with friends or a
+            competitive match, we've got you covered. Experience convenience and
+            flexibility in turf booking like never before. Join us today and
+            elevate your playing experience!
+          </p>
+        </div>
+        <div class="col">
+          <h3>
+            Contact US
+            <div class="underline"><span></span></div>
+          </h3>
+          <p class="email-id">tribeturf@gmail.com</p>
+          <h4>+91 - 7738341059</h4>
+        </div>
+        <div class="col">
+          <h3>
+            Links
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Locations</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>
+            Newsletter
+            <div class="underline"><span></span></div>
+          </h3>
+          <form>
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Enter your email id" required />
+            <button type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com/"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="https://www.whatsapp.com/"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="https://www.discord.com/"
+              ><i class="fa-brands fa-discord"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">Turf Tribe @ 2024 - All Rights Reserved</p>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2d46fd0bd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  </body>
+</html>
