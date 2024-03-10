@@ -25,4 +25,9 @@ Mongo DB Atlas:
 username : omkarr
 password : Omkar786
 
+<<<<<<< HEAD
 bla bla
+=======
+MongoDB Connection String:
+mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/
+>>>>>>> omkarr

@@ -1,16 +1,33 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
+from flask_pymongo import PyMongo
+from flask import jsonify
 
 app = Flask(__name__, static_url_path='/static')
+
+# Configure MongoDB connection
+app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
+mongo = PyMongo(app)
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# route for registration
-@app.route('/register')  
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template('signinreg.html')
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['user_password']
+        
+        # Insert data into MongoDB
+        users = mongo.db.users
+        users.insert_one({'name': name, 'email': email, 'password': password})
+        
+        return render_template('signinreg.html')
+    else:
+        return render_template('signinreg.html')
+
 
 @app.route('/cricket')  
 def cricket():
