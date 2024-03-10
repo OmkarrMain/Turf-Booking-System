@@ -24,3 +24,6 @@ Google Maps APi Key :-
 Mongo DB Atlas:
 username : omkarr
 password : Omkar786
+
+MongoDB Connection String:
+mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/

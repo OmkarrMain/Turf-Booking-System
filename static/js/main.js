@@ -168,18 +168,3 @@ function readUser(userId) {
     });
 }
 
-// Event listener for createForm submission
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('user_password').value;
-    createUser(name, email, password);
-});
-
-// Event listener for readForm submission
-document.getElementById('readForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const userId = document.getElementById('userId').value;
-    readUser(userId);
-});

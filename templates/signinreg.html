@@ -14,7 +14,7 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-up">
-        <form id="signupForm">
+        <form id="signupForm" action="/register" method="POST">
           <h1>Create Account</h1>
           <div class="social-icons">
             <a href="#" class="icon"
@@ -27,11 +27,24 @@
             ></a>
           </div>
           <span>or use your email for registeration</span>
-          <input type="text" id="name" placeholder="Name" required />
-          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
           <input
             type="password"
             id="user_password"
+            name="user_password"
             placeholder="Password"
             required
           />
@@ -52,16 +65,24 @@
             ></a>
           </div>
           <span>or use your email password</span>
-          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
           <input
             type="password"
             id="user_password"
+            name="user_password"
             placeholder="Password"
             required
           />
           <a href="#">Forget Your Password?</a>
           <button id="sign-in">Sign In</button>
         </form>
+        <div id="error-message"></div>
       </div>
       <div class="toggle-container">
         <div class="toggle">
