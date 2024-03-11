@@ -6,7 +6,7 @@ from flask_session import Session
 
 app = Flask(__name__, static_url_path='/static')
 app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
-app.config['SECRET_KEY'] = b'_5#y2L"F4Q8z\n\xec]/'
+app.config['SECRET_KEY'] = b'idkwhatitis'
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
