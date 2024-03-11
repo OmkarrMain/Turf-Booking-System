@@ -32,22 +32,26 @@ window.onload = function() {
 };
 
 
-// DropDown
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const userIcon = document.getElementById('user-icon');
     const dropdownContent = document.createElement('div');
     dropdownContent.className = 'dropdown-content';
-    
-    //"Sign Up" link
-    const signUpLink = document.createElement('a');
-    signUpLink.href = '/register';
-    signUpLink.innerText = 'Register';
-    
-    // Append links to the dropdown content
-    dropdownContent.appendChild(signUpLink);
+
+    // Fetch user's name from the server
+    $.ajax({
+        type: 'GET',
+        url: '/get_user_name',
+        success: function(response) {
+            const userName = response.name;
+            const userNameSpan = document.createElement('span');
+            userNameSpan.innerText = userName;
+            dropdownContent.appendChild(userNameSpan);
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching user name:', error);
+        }
+    });
+
     // Append dropdown content to the user icon
     userIcon.appendChild(dropdownContent);
 
@@ -55,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdownContent.classList.toggle('show');
     });
 });
+
 // for drop down animation
 
 document.addEventListener('DOMContentLoaded', function () {

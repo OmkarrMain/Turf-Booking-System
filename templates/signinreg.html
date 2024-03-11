@@ -52,7 +52,7 @@
         </form>
       </div>
       <div class="form-container sign-in">
-        <form id="signinForm">
+        <form id="signinForm" action="/signin" method="POST">
           <h1>Sign In</h1>
           <div class="social-icons">
             <a href="#" class="icon"
@@ -80,7 +80,7 @@
             required
           />
           <a href="#">Forget Your Password?</a>
-          <button id="sign-in">Sign In</button>
+          <button type="submit" id="sign-in">Sign In</button>
         </form>
         <div id="error-message"></div>
       </div>
@@ -116,7 +116,9 @@
       });
     </script>
     <div id="readResults"></div>
-    <link rel="stylesheet" href="signinreg.js" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/js/signinreg.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
