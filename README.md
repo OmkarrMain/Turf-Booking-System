@@ -25,9 +25,17 @@ Mongo DB Atlas:
 username : omkarr
 password : Omkar786
 
-<<<<<<< HEAD
 MongoDB Connection String:
 mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/
-=======
-bla bla
->>>>>>> cf4918d151d4200f08bfa933a6cd99995a3f567b
+
+Google Account:
+
+turftribe0781@gmail.com
+@07042003
+
+SMTP Server :-
+
+email: turftribe0781@gmail.com
+server : smtp.elasticemail.com
+password : @07042003
+password (server) : F2560104AC310A61E0ECE9183FD3BAF8009A
