@@ -1,11 +1,17 @@
+
+var locationPrompted = false;
+
 // Function to prompt user for location permission
 function promptForLocation() {
-    var allowLocation = confirm("Do you want to allow this website to know your location?");
-    if (allowLocation) {
-        detectUserLocation();
+    if (!locationPrompted) {
+        var allowLocation = confirm("Do you want to allow this website to know your location?");
+        if (allowLocation) {
+            detectUserLocation();
+        }
+        // Update flag to indicate location has been prompted
+        locationPrompted = true;
     }
 }
-
 // Function to detect user's location using Geolocation API
 function detectUserLocation() {
     if (navigator.geolocation) {
@@ -30,55 +36,28 @@ function detectUserLocation() {
 window.onload = function() {
     promptForLocation();
 };
+// Drop Down 
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const userIcon = document.getElementById('user-icon');
-    const dropdownContent = document.createElement('div');
-    dropdownContent.className = 'dropdown-content';
-
-    // Fetch user's name from the server
-    $.ajax({
-        type: 'GET',
-        url: '/get_user_name',
-        success: function(response) {
-            const userName = response.name;
-            const userNameSpan = document.createElement('span');
-            userNameSpan.innerText = userName;
-            dropdownContent.appendChild(userNameSpan);
-        },
-        error: function(xhr, status, error) {
-            console.error('Error fetching user name:', error);
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownContent = document.createElement("div");
+    dropdownContent.classList.add("dropdown-content");
+    dropdownContent.innerHTML = '<a href="signinreg.html">Register</a>';
+    
+    dropdown.appendChild(dropdownContent);
+    
+    // Show dropdown on hover
+    const userIcon = document.getElementById("user-icon");
+    userIcon.addEventListener("mouseenter", function () {
+      dropdownContent.style.display = "block";
     });
-
-    // Append dropdown content to the user icon
-    userIcon.appendChild(dropdownContent);
-
-    userIcon.addEventListener('click', function () {
-        dropdownContent.classList.toggle('show');
+    
+    // Hide dropdown when mouse leaves
+    dropdown.addEventListener("mouseleave", function () {
+      dropdownContent.style.display = "none";
     });
-});
-
-// for drop down animation
-
-document.addEventListener('DOMContentLoaded', function () {
-    const userIcon = document.getElementById('user-icon');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    userIcon.addEventListener('click', function () {
-        dropdownContent.classList.toggle('show');
-    });
-
-    userIcon.addEventListener('mouseenter', function () {
-        dropdownContent.classList.add('show');
-    });
-
-    userIcon.addEventListener('mouseleave', function () {
-        dropdownContent.classList.remove('show');
-    });
-});
-
+  });
+  
 
 // OTP
 function sendOTP() {
@@ -172,4 +151,3 @@ function readUser(userId) {
         // Handle error response here
     });
 }
-
