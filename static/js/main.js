@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
     const dropdownContent = document.createElement("div");
     dropdownContent.classList.add("dropdown-content");
-    dropdownContent.innerHTML = '<a href="signinreg.html">Register</a>';
+    dropdownContent.innerHTML = '<a href="/register">Register</a>';
     
     dropdown.appendChild(dropdownContent);
     
