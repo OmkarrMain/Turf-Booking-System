@@ -26,15 +26,24 @@
       </a>
       <nav>
         <ul class="nav-links">
+          {% if user_name %}
           <li><a href="/">Home</a></li>
           <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/location">Location</a></li>
           <li><a href="/">History</a></li>
           <li><a href="/aboutus">About Us</a></li>
-          <li class="dropdown"></li>
-          <li id="user-icon"><i class="fas fa-user"></i></li>
+          <li class="userinfo">
+            <i class="fas fa-user"></i>{{ user_name }}
+            <ul class="logout-dropdown hidden">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <li class="register"><a href="/register">Register</a></li>
+          {% endif %}
         </ul>
       </nav>
+
       <h1>Turf Booking System</h1>
       <p>
         Step into a world where your love for sports meets the ease of booking

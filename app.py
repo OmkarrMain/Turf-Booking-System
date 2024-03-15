@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify, s
 from flask_pymongo import PyMongo
 import bcrypt
 import base64
-from flask_session import Session
 from flask_mail import Mail, Message
 import random
 
@@ -10,7 +9,6 @@ app = Flask(__name__, static_url_path='/static')
 app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
 
 app.config['SECRET_KEY'] = b'idkwhatitis'
-app.config['SESSION_TYPE'] = 'filesystem'
 
 app.config['MAIL_SERVER'] = 'smtp.elasticemail.com'
 app.config['MAIL_PORT'] = 2525
@@ -19,14 +17,18 @@ app.config['MAIL_PASSWORD'] = 'F2560104AC310A61E0ECE9183FD3BAF8009A'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
-Session(app)
-
 mail = Mail(app)
 mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    user_name = session.get('user_name')
+    return render_template('index.html', user_name=user_name)
+
+@app.route('/logout')
+def logout():
+    session.pop('user_name', None)
+    return redirect('/')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -103,9 +105,12 @@ def reset_password():
             session.pop('otp', None)
             session.pop('email', None)
 
-            return jsonify({'success': True, 'message': 'Password updated successfully'})
+            return redirect(url_for('register'))  # Redirect to login page after resetting password
+
         else:
-            return jsonify({'success': False, 'error': 'Invalid OTP'})
+            error_message = "Invalid OTP"
+            return render_template('reset_password.html', error_message=error_message)
+    
     return render_template('reset_password.html')
 
 @app.route('/cricket')  
@@ -139,8 +144,6 @@ def about_us():
 @app.route('/history')
 def history():
     return render_template('history.html')
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

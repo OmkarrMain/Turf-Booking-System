@@ -36,28 +36,51 @@ function detectUserLocation() {
 window.onload = function() {
     promptForLocation();
 };
+
 // Drop Down 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownContent = document.createElement("div");
-    dropdownContent.classList.add("dropdown-content");
-    dropdownContent.innerHTML = '<a href="/register">Register</a>';
-    
-    dropdown.appendChild(dropdownContent);
-    
-    // Show dropdown on hover
-    const userIcon = document.getElementById("user-icon");
-    userIcon.addEventListener("mouseenter", function () {
-      dropdownContent.style.display = "block";
+    const registerLi = document.querySelector(".register");
+    const logoutDropdown = document.querySelector(".logout-dropdown");
+    const userinfo = document.querySelector(".userinfo");
+
+    // Check if user is logged in
+    const userLoggedIn = '{{ user_name }}' !== '';
+
+    if (userLoggedIn) {
+        if (registerLi) {
+            registerLi.classList.add("hidden");
+        }
+        if (logoutDropdown) {
+            logoutDropdown.classList.remove("hidden");
+        }
+    } else {
+        if (registerLi) {
+            registerLi.classList.remove("hidden");
+        }
+        if (logoutDropdown) {
+            logoutDropdown.classList.add("hidden");
+        }
+    }
+
+    // Toggle logout dropdown visibility
+    if (userinfo) {
+        userinfo.addEventListener("click", function () {
+            logoutDropdown.classList.toggle("show");
+        });
+    }
+
+    // Hide logout dropdown when clicking anywhere on the homepage
+    document.body.addEventListener("click", function (event) {
+        const isUserinfoClicked = userinfo.contains(event.target);
+        if (!isUserinfoClicked && logoutDropdown.classList.contains("show")) {
+            logoutDropdown.classList.remove("show");
+        }
     });
-    
-    // Hide dropdown when mouse leaves
-    dropdown.addEventListener("mouseleave", function () {
-      dropdownContent.style.display = "none";
-    });
-  });
-  
+});
+
+
+
 
 // OTP
 function sendOTP() {
