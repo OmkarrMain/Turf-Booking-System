@@ -56,3 +56,7 @@ server : smtp.elasticemail.com
 password : @07042003
 password (server) : F2560104AC310A61E0ECE9183FD3BAF8009A
 >>>>>>> omkarr
+
+Images :-
+
+1500 x 1001 px

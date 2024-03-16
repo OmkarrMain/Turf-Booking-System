@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; }
+.container { width: 100%; max-width: 800px; margin: auto; }
+.header { background: url('../images/cricket.jpg') no-repeat center center; background-size: cover; height: 300px; }
+.info, .location, .sports, .amenities, .booking { padding: 15px; }
+.info h1 { margin: 0; }
+.info p { margin: 5px 0; }
+.info .rating { color: #ffd700; }
+.button { background: green; color: white; padding: 10px 20px; text-align: center; display: inline-block; margin-top: 10px; cursor: pointer; }
+.button:hover { background: darkgreen; }
+@media (max-width: 600px) {
+  .header { height: 200px; }
+  .button { padding: 8px 16px; }
+}
