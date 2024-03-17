@@ -249,7 +249,11 @@ footer {
   background: #acacac;
   color: #0e0e0e;
   padding: 100px 0 30px;
-  border-top-left-radius: 125px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  /* border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;    */
+     /* 125 */
   font-size: 13px;
   line-height: 20px;
 }
