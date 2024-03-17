@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body {
   margin: 0;
@@ -36,3 +37,231 @@ body {
 .container-small:nth-child(even) { background-color: #99ff99; }
 .container-large { background-color: #9999ff; }
 /* Add more container styles as needed */
+=======
+/* CSS styles for Combined Page */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Adjusting position of containers to left */
+  }
+  
+  .container {
+    width: 50%; /* Set width for both containers */
+    margin: 0 10px; /* Adjust spacing between containers */
+  }
+  
+  .turf-container {
+    width: 50%; /* Set width for both containers */
+    margin: 0 10px; /* Adjust spacing between containers */
+  }
+  
+  /* Styles for app.html content */
+  .header {
+    background: url('../images/T\ turf\ 1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+  }
+  
+  .info,
+  .location,
+  .sports,
+  .amenities,
+  .booking {
+    padding: 15px;
+  }
+  
+  .info h1 {
+    margin: 0;
+  }
+  
+  .info p {
+    margin: 5px 0;
+  }
+  
+  .info .rating {
+    color: #ffd700;
+  }
+  
+  .button {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: darkgreen;
+  }
+  
+  @media (max-width: 600px) {
+    .header {
+      height: 200px;
+    }
+    .button {
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Styles for cricket.html content */
+  .turf {
+    flex: 1; /* Each container occupies equal space */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row; /* Image and info side by side */
+  }
+  
+  .turf:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .turf-image {
+    flex: 1;
+  }
+  
+  .turf-image img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; 
+  }
+  
+  .turf-info {
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+  }
+  
+  .turf-info h1 {
+    margin-top: 0;
+    font-size: 18px; /* Adjust font size */
+  }
+  
+  .turf-info h1 a {
+    color: #000; /* Set name color to black */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .turf-info p {
+    margin: 5px 0;
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .turf {
+      flex-direction: column; /* On smaller screens, stack image and info vertically */
+    }
+  }
+
+  .amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.amenities li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.amenities i {
+    margin-right: 10px;
+    /* Add your icon font styles here */
+}
+
+/* Example using Font Awesome icons */
+.icon-turf:before {
+    content: "\\f1e3"; /* fa-futbol-o icon */
+}
+
+.icon-room:before {
+    content: "\\f236"; /* fa-home icon */
+}
+
+.icon-water:before {
+    content: "\\f043"; /* fa-tint icon */
+}
+
+.icon-lights:before {
+    content: "\\f0eb"; /* fa-lightbulb-o icon */
+}
+
+.icon-food:before {
+    content: "\\f2e7"; /* fa-utensils icon */
+}
+
+.icon-lounge:before {
+    content: "\\f0f8"; /* fa-couch icon */
+}
+
+
+/* Search Box */
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.search-container input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3; /* Adjust as needed */
+}
+
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Web page background color */
+body {
+  background-color: lightgreen;
+  }
+
+>>>>>>> 4c35f1f8690902533e5def1b241c7d65e96fab3b

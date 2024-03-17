@@ -6,8 +6,20 @@
   <title>Cricket Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/cricket.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+
+  <!--Back button-->
+  <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+
+    <!-- Search box -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
+      <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
+   </div>
+
+
   <div class="container-wrapper">
     <!-- App.html content -->
     <div class="container">
@@ -50,7 +62,7 @@
           <div class="button see-more">See More Info</div>
         </div>
       </div>
-      <!-- Include more turfs here -->
+      <!-- Turf 2 -->
       <div class="turf">
         <div class="turf-image">
           <img src="../static/images/cricketdash.jpeg" alt="Turf Image">
@@ -80,7 +92,7 @@
         </div>
       </div>
 
-      <!-- Turf 3 -->
+      <!-- Turf 4 -->
       <div class="turf">
         <div class="turf-image">
           <img src="../static/images/C Turf 4.jpg" alt="Turf Image">
@@ -88,9 +100,24 @@
         <div class="turf-info">
           <h1><a>Patuck - Sporko Arena</a></h1>
           <p class="bold">Location :</p><p>Patuck Gala Sporko Arena, Patuck Technical Highschool & Junior College, 100 Nehru Road, Rustomba Patuck Marg, Demello Compound, Santacruz East, Vakola Bridge, Mumbai 400055</p>
-          <p class="bold">Hourly Price:</p><p> ₹500</p>
+          <p class="bold">Hourly Price:</p><p> ₹500 onwards</p>
           <p class="bold">Opening Hours:</p><p> 9:00 AM - 10:00 PM</p>  
           <p class="bold">Rating:</p><p>4.5</p>  
+          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        </div>
+      </div>
+
+      <!-- Turf 6 -->
+      <div class="turf">
+        <div class="turf-image">
+          <img src="../static/images/C Turf 6.jpg" alt="Turf Image">
+        </div>
+        <div class="turf-info">
+          <h1><a>Greenspaces Turf - Saki Naka</a></h1>
+          <p class="bold">Location :</p><p>Near Hotel Finch, Saki Vihar Rd, opposite Domino's Pizza, Andheri East, Saki Vihar Road, Mumbai 400072</p>
+          <p class="bold">Hourly Price:</p><p> ₹1200 onwards</p>
+          <p class="bold">Opening Hours:</p><p> 6:00 AM - 10:00 PM</p>  
+          <p class="bold">Rating:</p><p>3.9</p>  
           <div class="button see-more">See More Info</div> <!-- Added button for more info -->
         </div>
       </div>
