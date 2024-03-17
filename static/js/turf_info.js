@@ -21,3 +21,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+//search box
+function searchTurf() {
+    // Your search functionality here
+    console.log("Search button clicked");
+    // You can add your search logic here
+  }
+
+  
+  
+// Back Button
+function goBack() {
+    window.history.back();
+  }
+  
+ 
