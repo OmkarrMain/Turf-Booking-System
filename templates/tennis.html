@@ -5,100 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cricket Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/cricket.css">
+  <link rel="stylesheet" href="../static/css/tennis.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
 </head>
 <body>
-  <div class="container-wrapper">
-    <!-- App.html content -->
-    <div class="container">
-      <div class="header"></div>
-      <div class="info">
-        <h1>Emma Sports Academy</h1>
-        <p>₹600 onwards • 12:00 am - 11:59 pm</p>
-        <p class="rating">Rating: 3.7</p>
-      </div>
-      <div class="location">
-        <h2>Location</h2>
-        <p>Samhita Complex, Bldg no 8, Telephone Exchange Rd., Andheri East, Sakinaka Junction, Mumbai 400072</p>
-        <div class="button">Navigate</div>
-      </div>
-      <div class="sports">
-        <h2>Available Sports</h2>
-        <p>Box Cricket, Football</p>
-      </div>
-      <div class="amenities">
-        <h2>Amenities</h2>
-        <ul>
-            <li><i class="icon-turf"></i>Artificial Turf</li>
-            <li><i class="icon-room"></i>Changing Room</li>
-            <li><i class="icon-water"></i>Drinking Water</li>
-            <li><i class="icon-lights"></i>Flood Lights</li>
-            <li><i class="icon-food"></i>Food Court</li>
-            <li><i class="icon-lounge"></i>Seating Lounge</li>
-        </ul>
-    </div>
-    
-      <div class="booking">
-        <div class="button">PROCEED TO BOOK</div>
-      </div>
-    </div>
+  <!--Back button-->
+  <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
 
-    <!-- Cricket.html content -->
+    <!-- Search box -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
+      <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
+   </div>
+
+   
+   <!-- Cricket.html content -->
     <div class="turf-container">
       <div class="turf">
         <div class="turf-image">
-          <img src="../static/images/C Turf 3.jpg" alt="Turf Image">
+          <img src="../static/images/T turf 1.jpg " alt="Turf Image">
         </div>
         <div class="turf-info">
-          <h1><a>Falah Turf</a></h1>
-          <p class="bold">Location:</p> <p>111, Lathia Rubber Factory Rd, Saki Naka, Andheri Kurla Rd, Mumbai 400072</p> 
-          <p class="bold">Hourly Price:</p><p> ₹600</p> 
+          <h1><a>Emma Sports Academy</a></h1>
+          <p class="bold">Location:</p> <p>Plot no. 103, Behind Hiranandani Hospital, Powai, Hiranandani gardens, Mumbai 400076</p> 
+          <p class="bold">Hourly Price:</p><p> ₹600 onwards</p> 
           <p class="bold">Opening Hours: </p><p>12:00 AM - 11:59 PM</p> 
-          <p class="bold">Rating:</p><p> 4.1</p>
+          <p class="bold">Rating:</p><p> 3.1</p>
+          <div class="button see-more">See More Info</div>
         </div>
       </div>
-      <!-- Include more turfs here -->
+      <!-- Turf 2 -->
       <div class="turf">
         <div class="turf-image">
-          <img src="../static/images/cricketdash.jpeg" alt="Turf Image">
+          <img src="../static/images/T turf 2.jpg" alt="Turf Image">
         </div>
         <div class="turf-info">
-          <h1><a>Sportz Villa</a></h1>
-          <p class="bold">Location: </p><p>Aaram Society Rd, Hind Nagar, Santacruz East, Vakola Bridge, Mumbai 400055</p>
-          <p class="bold">Hourly Price: </p><p>₹450</p>
-          <p class="bold">Opening Hours: </p><p>9:00 AM - 10:00 PM</p>  
-          <p class="bold">Rating: </p> <p>3.9</p>  
-        </div>
-      </div>
-
-      <!-- Turf 3 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/C turf 2.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>The Spirit Field- Samita Complex</a></h1>
-          <p class="bold">Location:</p><p>Saki Vihar Road, Saki Naka</p>
-          <p class="bold">Hourly Price:</p><p> ₹600</p> 
-          <p class="bold">Opening Hours:</p><p> 10:00 AM - 10:00 PM</p> 
-          <p class="bold">Rating:</p><p> 4.7</p>  
+          <h1><a>TSG-All India Balkanji Bari[Santacruz]</a></h1>
+          <p class="bold">Location: </p><p>Juhu Tara Rd, Santacruz West, GOI Staff Colony, Mumbai 400054</p>
+          <p class="bold">Hourly Price: </p><p>₹300 onwards</p>
+          <p class="bold">Opening Hours: </p><p>12:00 AM - 11:59 PM</p>  
+          <p class="bold">Rating: </p> <p>3.5</p>  
+          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
         </div>
       </div>
 
       <!-- Turf 3 -->
       <div class="turf">
         <div class="turf-image">
-          <img src="../static/images/C Turf 4.jpg" alt="Turf Image">
+          <img src="../static/images/T turf 3.jpg " alt="Turf Image">
         </div>
         <div class="turf-info">
-          <h1><a>Patuck - Sporko Arena</a></h1>
-          <p class="bold">Location :</p><p>Patuck Gala Sporko Arena, Patuck Technical Highschool & Junior College, 100 Nehru Road, Rustomba Patuck Marg, Demello Compound, Santacruz East, Vakola Bridge, Mumbai 400055</p>
-          <p class="bold">Hourly Price:</p><p> ₹500</p>
-          <p class="bold">Opening Hours:</p><p> 9:00 AM - 10:00 PM</p>  
-          <p class="bold">Rating:</p><p>4.5</p>  
+          <h1><a>AITA Tennis Center of Excellence</a></h1>
+          <p class="bold">Location:</p><p>AITA Trust, University of Mumbai, Kolivery Village, Vidya Nagari, Santacruz East, Kalina, Mumbai 40009</p>
+          <p class="bold">Hourly Price:</p><p> ₹250 onwards</p> 
+          <p class="bold">Opening Hours:</p><p> 6:00 AM - 6:00 PM</p> 
+          <p class="bold">Rating:</p><p> 3.7</p>  
+          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
         </div>
+      </div>
 
-       
+      <!-- Turf 4 -->
+      <div class="turf">
+        <div class="turf-image">
+          <img src="../static/images/T Turf 4.jpg" alt="Turf Image">
+        </div>
+        <div class="turf-info">
+          <h1><a>Maharashtra State Lawn Tennis Association</a></h1>
+          <p class="bold">Location :</p><p>165, Dr. G.A. Ranade Tennis Centre, , Cooperage, Maharshi Karve Road, Mumbai 400021
+          </p>
+          <p class="bold">Hourly Price:</p><p> ₹350 onwards</p>
+          <p class="bold">Opening Hours:</p><p> 7:00 AM - 11:00 PM</p>  
+          <p class="bold">Rating:</p><p>4.2</p>  
+          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        </div>
+      </div>
+      <!-- Turf 5 -->
+      <div class="turf">
+        <div class="turf-image">
+          <img src="../static/images/T turf 5.jpg" alt="Turf Image">
+        </div>
+        <div class="turf-info">
+          <h1><a>District Sports Club</a></h1>
+          <p class="bold">Location :</p><p>DSC BKC, Near BKC Bus Depot, Bandra Kurla Complex, Sion Bandra Link Road, Mumbai 400017
+          </p>
+          <p class="bold">Hourly Price:</p><p> ₹1000 onwards</p>
+          <p class="bold">Opening Hours:</p><p> 7:00 AM - 11:59 PM</p>  
+          <p class="bold">Rating:</p><p>3.6</p>  
+          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        </div>
+      </div>
 
       <!-- Add All Turf Above This -->
     </div>
