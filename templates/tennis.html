@@ -3,102 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cricket Page</title>
+  <title>Tennis Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/tennis.css">
+  <link rel="stylesheet" href="../static/css/template.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
 </head>
 <body>
+
   <!--Back button-->
   <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
 
     <!-- Search box -->
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
-      <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
+      <input type="text" id="TennissearchInput" placeholder="Search places..." style="width: 400px;">
+      <button onclick="searchTennisTurf()"><i class="fas fa-search"></i></button>
    </div>
 
-   
-   <!-- Cricket.html content -->
-    <div class="turf-container">
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/T turf 1.jpg " alt="Turf Image">
+   <!-- Place containers -->
+   <div class="container-wrapper">
+    <div class="container">
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://example.com/default_tennis_image.jpg" alt="Tennis court Image">
         </div>
-        <div class="turf-info">
-          <h1><a>Emma Sports Academy</a></h1>
-          <p class="bold">Location:</p> <p>Plot no. 103, Behind Hiranandani Hospital, Powai, Hiranandani gardens, Mumbai 400076</p> 
-          <p class="bold">Hourly Price:</p><p> ₹600 onwards</p> 
-          <p class="bold">Opening Hours: </p><p>12:00 AM - 11:59 PM</p> 
-          <p class="bold">Rating:</p><p> 3.1</p>
-          <div class="button see-more">See More Info</div>
-        </div>
-      </div>
-      <!-- Turf 2 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/T turf 2.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>TSG-All India Balkanji Bari[Santacruz]</a></h1>
-          <p class="bold">Location: </p><p>Juhu Tara Rd, Santacruz West, GOI Staff Colony, Mumbai 400054</p>
-          <p class="bold">Hourly Price: </p><p>₹300 onwards</p>
-          <p class="bold">Opening Hours: </p><p>12:00 AM - 11:59 PM</p>  
-          <p class="bold">Rating: </p> <p>3.5</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        <div class="place-info">
+          <h1>Tennis court</h1>
+          <p class="bold">Location: 4VH7+J83, Madhukunj Society, Sher E Punjab Colony, Andheri East, Mumbai</p>
+          <p class="bold">Hourly Price: ₹631</p>
+          <p class="bold">Rating: 4.7</p>
+          <a href="/slotbooking?name=Tennis court"><div class="button see-more">Book Now</div></a>
         </div>
       </div>
-
-      <!-- Turf 3 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/T turf 3.jpg " alt="Turf Image">
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://example.com/default_tennis_image.jpg" alt="Tennis Court Image">
         </div>
-        <div class="turf-info">
-          <h1><a>AITA Tennis Center of Excellence</a></h1>
-          <p class="bold">Location:</p><p>AITA Trust, University of Mumbai, Kolivery Village, Vidya Nagari, Santacruz East, Kalina, Mumbai 40009</p>
-          <p class="bold">Hourly Price:</p><p> ₹250 onwards</p> 
-          <p class="bold">Opening Hours:</p><p> 6:00 AM - 6:00 PM</p> 
-          <p class="bold">Rating:</p><p> 3.7</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        <div class="place-info">
+          <h1>Tennis Court</h1>
+          <p class="bold">Location: 4V5C+6WG, Anmol Apartment, Andheri East, Sir Mathuradas Vasanji Rd, Andheri East, Bamanpuri Village</p>
+          <p class="bold">Hourly Price: ₹718</p>
+          <p class="bold">Rating: 2.7</p>
+          <a href="/slotbooking?name=Tennis Court"><div class="button see-more">Book Now</div></a>
         </div>
       </div>
-
-      <!-- Turf 4 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/T Turf 4.jpg" alt="Turf Image">
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://example.com/default_tennis_image.jpg" alt="Tennis Court, Andheri Sports Complex Image">
         </div>
-        <div class="turf-info">
-          <h1><a>Maharashtra State Lawn Tennis Association</a></h1>
-          <p class="bold">Location :</p><p>165, Dr. G.A. Ranade Tennis Centre, , Cooperage, Maharshi Karve Road, Mumbai 400021
-          </p>
-          <p class="bold">Hourly Price:</p><p> ₹350 onwards</p>
-          <p class="bold">Opening Hours:</p><p> 7:00 AM - 11:00 PM</p>  
-          <p class="bold">Rating:</p><p>4.2</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        <div class="place-info">
+          <h1>Tennis Court, Andheri Sports Complex</h1>
+          <p class="bold">Location: 4RHP+4V7, Azad Nagar, Andheri West, Mumbai</p>
+          <p class="bold">Hourly Price: ₹820</p>
+          <p class="bold">Rating: 3.6</p>
+          <a href="/slotbooking?name=Tennis Court, Andheri Sports Complex"><div class="button see-more">Book Now</div></a>
         </div>
       </div>
-      <!-- Turf 5 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/T turf 5.jpg" alt="Turf Image">
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZlgQogDqGZ8eAgTay7Zo1b76eIez66Rw_HJCXJmHnSv1XZokTOW8qpptfl0OK8P_xNSlIrBh2n228bPtbQcs8M5CuvwGNC2-m1RbZX6h2rZjY52a2B0pXTVpR0iqqBk884Preql1rZG1gldmgoEheAfI4mxHTZH7YKxpP1ex0KMQhO&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Swami Samarth Garden Tennis court Image">
         </div>
-        <div class="turf-info">
-          <h1><a>District Sports Club</a></h1>
-          <p class="bold">Location :</p><p>DSC BKC, Near BKC Bus Depot, Bandra Kurla Complex, Sion Bandra Link Road, Mumbai 400017
-          </p>
-          <p class="bold">Hourly Price:</p><p> ₹1000 onwards</p>
-          <p class="bold">Opening Hours:</p><p> 7:00 AM - 11:59 PM</p>  
-          <p class="bold">Rating:</p><p>3.6</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
+        <div class="place-info">
+          <h1>Swami Samarth Garden Tennis court</h1>
+          <p class="bold">Location: Shagun Apts, 289, Guru Gobind Singh Marg, Sher E Punjab Colony, Andheri East, Mumbai</p>
+          <p class="bold">Hourly Price: ₹741</p>
+          <p class="bold">Rating: 3.0</p>
+          <a href="/slotbooking?name=Swami Samarth Garden Tennis court"><div class="button see-more">Book Now</div></a>
         </div>
       </div>
-
-      <!-- Add All Turf Above This -->
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJb5rakIF2Jh0llGNZxwVJoZmVMxoRUebOgLsHF-9HNIYCS3uAn57c97oTzLXwQts7TR0x7sUi05CZvqns946Seaf6m0s1opHCZ4WGym7VRwam9B4eigJv7SuTydL8FuA3CbKhmgXaWdQ5ZiW5R-y15WmM26Lpe3RsWfVOx_fAu2V_tN&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Grandslam tennis academy Image">
+        </div>
+        <div class="place-info">
+          <h1>Grandslam tennis academy</h1>
+          <p class="bold">Location: Veera Desai Rd, Prathmesh Complex, Andheri West, Mumbai</p>
+          <p class="bold">Hourly Price: ₹749</p>
+          <p class="bold">Rating: 3.8</p>
+          <a href="/slotbooking?name=Grandslam tennis academy"><div class="button see-more">Book Now</div></a>
+        </div>
+      </div>
+    
+      <div class="place">
+        <div class="place-image">
+          <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJbYSw4wO2VRpN7iQm6tKhj1-lpCnm0HmGEyeMOkGVC5qNrjcj5JgCwFGOdF7Z9JUECFETDFGBTXC5gDm_7UdNNeVYlzUY4kkqlbwhiUqIGIMeZsMhNRlFY4mqGyfRfVsOJ-3lGQ641v51kvLtwEoEbbQrTJMj5MrOQjq6b-1YRtdaNE&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Padel Tennis Federation - Sky Padel | Sahara Star Image">
+        </div>
+        <div class="place-info">
+          <h1>Padel Tennis Federation - Sky Padel | Sahara Star</h1>
+          <p class="bold">Location: 3VX2+23V, Domestic Arpt Rd, Navpada, Vile Parle East, Vile Parle, Mumbai</p>
+          <p class="bold">Hourly Price: ₹799</p>
+          <p class="bold">Rating: 1.3</p>
+          <a href="/slotbooking?name=Padel Tennis Federation - Sky Padel | Sahara Star"><div class="button see-more">Book Now</div></a>
+        </div>
+      </div>
+    
     </div>
-  </div>
+   </div>
+
   <script src="../static/js/turf_info.js"></script>
 </body>
 </html>

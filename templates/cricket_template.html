@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/template.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!--Back button-->
+  <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+
+  <!-- Search box -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
+    <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
+  </div>
+
+  <!-- Turf containers -->
+  <div class="container">
+    {% for turf in turfs %}
+    <div class="turf">
+      <div class="turf-image">
+        <img src="{{ turf.image }}" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>{{ turf.name }}</h1>
+        <p class="bold">Location: {{ turf.location }}</p>
+        <p class="bold">{{ turf.price }}</p>
+        <p class="bold">{{ turf.rating }}</p>
+        <a href="/slotbooking?name={{ turf.name }}&price={{ turf.price }}"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <script src="../static/js/turf_info.js"></script>
+</body>
+</html>

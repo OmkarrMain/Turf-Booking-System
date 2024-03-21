@@ -1,41 +1,52 @@
+//Form Alert Message
+document.getElementById('emailForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var email = document.getElementById('emailInput').value;
 
-var locationPrompted = false;
+    alert("Thank you for providing your Email!, You will receive updates from Us!!");
+    emailInput.value = "";
+});
 
-// Function to prompt user for location permission
-function promptForLocation() {
-    if (!locationPrompted) {
-        var allowLocation = confirm("Do you want to allow this website to know your location?");
-        if (allowLocation) {
-            detectUserLocation();
-        }
-        // Update flag to indicate location has been prompted
-        locationPrompted = true;
-    }
-}
-// Function to detect user's location using Geolocation API
-function detectUserLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            function (position) {
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
-                var locationText = "Latitude: " + latitude + ", Longitude: " + longitude;
-                // Update location in navigation bar
-                document.getElementById('location').innerText = locationText;
-            },
-            function (error) {
-                console.error('Error getting user location:', error);
-            }
-        );
-    } else {
-        alert('Geolocation is not supported by this browser.');
-    }
-}
 
-// Event listener for page load
-window.onload = function () {
-    promptForLocation();
-};
+
+
+// var locationPrompted = false;
+
+// // Function to prompt user for location permission
+// function promptForLocation() {
+//     if (!locationPrompted) {
+//         var allowLocation = confirm("Do you want to allow this website to know your location?");
+//         if (allowLocation) {
+//             detectUserLocation();
+//         }
+//         locationPrompted = true;
+//     }
+// }
+
+// // Function to detect user's location using Geolocation API
+// function detectUserLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(
+//             function (position) {
+//                 var latitude = position.coords.latitude;
+//                 var longitude = position.coords.longitude;
+//                 var locationText = "Latitude: " + latitude + ", Longitude: " + longitude;
+//                 // Update location in navigation bar
+//                 document.getElementById('location').innerText = locationText;
+//             },
+//             function (error) {
+//                 console.error('Error getting user location:', error);
+//             }
+//         );
+//     } else {
+//         alert('Geolocation is not supported by this browser.');
+//     }
+// }
+
+// // Event listener for page load
+// window.onload = function () {
+//     promptForLocation();
+// };
 
 // Drop Down 
 
@@ -174,3 +185,5 @@ function readUser(userId) {
             // Handle error response here
         });
 }
+
+

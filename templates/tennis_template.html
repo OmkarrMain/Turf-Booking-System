@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tennis Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/template.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!--Back button-->
+  <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+
+    <!-- Search box -->
+    <div class="search-container">
+      <input type="text" id="TennissearchInput" placeholder="Search places..." style="width: 400px;">
+      <button onclick="searchTennisTurf()"><i class="fas fa-search"></i></button>
+   </div>
+
+   <!-- Place containers -->
+   <div class="container-wrapper">
+    <div class="container">
+    {% for place in places %}
+      <div class="place">
+        <div class="place-image">
+          <img src="{{ place.image }}" alt="{{ place.name }} Image">
+        </div>
+        <div class="place-info">
+          <h1>{{ place.name }}</h1>
+          <p class="bold">Location: {{ place.location }}</p>
+          <p class="bold">{{ place.price }}</p>
+          <p class="bold">{{ place.rating }}</p>
+          <a href="/slotbooking?name={{ place.name }}"><div class="button see-more">Book Now</div></a>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+   </div>
+
+  <script src="../static/js/turf_info.js"></script>
+</body>
+</html>

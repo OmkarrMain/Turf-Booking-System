@@ -4,6 +4,8 @@ import bcrypt
 import base64
 from flask_mail import Mail, Message
 import random
+import subprocess
+from functools import wraps
 
 app = Flask(__name__, static_url_path='/static')
 app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
@@ -17,8 +19,18 @@ app.config['MAIL_PASSWORD'] = 'F2560104AC310A61E0ECE9183FD3BAF8009A'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
-mail = Mail(app)
 mongo = PyMongo(app)
+mail = Mail(app)
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user_name' not in session:
+            return redirect(url_for('signinreg'))
+        return f(*args, **kwargs)
+    return decorated_function
+
+
 
 @app.route('/')
 def index():
@@ -73,6 +85,40 @@ def signin():
     else:
         return jsonify({'error': 'Login Failed'}), 401
 
+#Admin Login
+    
+@app.route('/adminsignin', methods=['POST'])
+def adminsignin():
+    email = request.form.get('email')
+    password = request.form.get('user_password')
+
+    if not email or not password:
+        return jsonify({'error': 'Please enter email and password'}), 400
+
+    users = mongo.db.users
+    user = users.find_one({'email': email})
+
+    if user and bcrypt.checkpw(password.encode('utf-8'), base64.b64decode(user['password'])):
+        # Check if the email matches the desired admin email addresses
+        if email in ["admin1@gmail.com", "admin2@gmail.com"]:
+            return redirect(url_for('adminpage')) 
+        else:
+            # Set user's name in session
+            session['user_name'] = user['name']
+            return jsonify({'message': 'Login Success'}), 200
+    else:
+        return jsonify({'error': 'Login Failed'}), 401
+
+
+
+@app.route('/adminpage')
+@login_required
+def adminpage():
+    return render_template('adminpage.html')
+
+
+
+
 @app.route('/forgot_password', methods=['GET', 'POST'])
 def forgot_password():
     if request.method == 'POST':
@@ -113,37 +159,54 @@ def reset_password():
     
     return render_template('reset_password.html')
 
-@app.route('/cricket')  
+@app.route('/cricket')
+@login_required
 def cricket():
+    subprocess.run(['python', 'location_turf.py'])  # Run location_turf.py
     return render_template('cricket.html')
 
 @app.route('/tennis')  
+@login_required
 def tennis():
+    subprocess.run(['python', 'location_tennis.py'])  # Run location_turf.py
     return render_template('tennis.html')
 
 @app.route('/football')
+@login_required
 def football():
+    subprocess.run(['python', 'location_football.py'])  # Run location_turf.py
     return render_template('football.html')
 
 @app.route('/yoga')
+@login_required
 def yoga():
+    subprocess.run(['python', 'location_yoga.py'])  # Run location_turf.py
     return render_template('yoga.html')
 
 @app.route('/dashboard')
+@login_required
 def dashboard():
     return render_template('dashboard.html')
 
 @app.route('/location')
+@login_required
 def location():
+    subprocess.run(['python', 'location.py'])
     return render_template('location.html')
 
 @app.route('/aboutus')
+@login_required
 def about_us():
     return render_template('aboutus.html')
 
 @app.route('/history')
+@login_required
 def history():
     return render_template('history.html')
+
+@app.route('/slotbooking')
+def render_slotbooking():
+    return render_template('slotbooking.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

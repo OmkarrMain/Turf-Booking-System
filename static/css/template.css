@@ -1,0 +1,141 @@
+/* CSS for Football Page layout */
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.turf{
+  grid-column: span 1; /* Ensure each football turf spans only one column */
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+.turf,.place{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+.turf,.place:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #4CAF50;
+}
+
+.turf-image, .place-image{
+  position: relative;
+  width: 100%;
+}
+
+.turf-image,.place-image img {
+  width: 100%;
+  height: auto;
+  text-align: center; 
+}
+
+.turf-info,.place-info {
+  padding: 20px;
+}
+
+.turf-info,.place-image h1 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px; /* Add margin-bottom to create space between image and h1 tag */
+}
+
+.turf-info,.place-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.button {
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: darkgreen;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
