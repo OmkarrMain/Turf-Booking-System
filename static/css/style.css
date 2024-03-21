@@ -290,7 +290,7 @@ footer {
 
 .email-id {
   width: fit-content;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000000;
   margin: 20px 0;
 }
 
@@ -310,7 +310,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000000;
   margin-bottom: 50px;
 }
 
@@ -322,7 +322,7 @@ form .fa-regula {
 form input {
   width: 100%;
   background: transparent;
-  color: #ccc;
+  color: #000000;
   border: 0;
   outline: none;
 }

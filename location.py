@@ -1,6 +1,7 @@
 import folium
 import googlemaps
 import webbrowser
+import os
 
 gmaps = googlemaps.Client(key='AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go')
 
@@ -17,7 +18,7 @@ def get_user_location():
 # Places API to search for nearby turfs
 def search_nearby_turfs(user_location):
     try:
-        places_result = gmaps.places_nearby(location=user_location, radius=5000, keyword='turf')
+        places_result = gmaps.places_nearby(location=user_location, radius=2500, keyword='turf')
         turfs = places_result['results']
         return turfs
     except Exception as e:
@@ -42,12 +43,10 @@ def main():
                 turf_location = (turf['geometry']['location']['lat'], turf['geometry']['location']['lng'])
                 folium.Marker(location=turf_location, popup=turf['name']).add_to(turf_map)
 
-            # Save the map as an HTML file
-            turf_map.save('location.html')
+            file_path = os.path.join('templates', 'location.html')
+            turf_map.save(file_path)
             print("location.html")
 
-            # Open the generated map in the default web browser
-            webbrowser.open('location.html')
         else:
             print("No nearby turfs found.")
     else:

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/template.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- Back button -->
+  <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+
+  <!-- Search box -->
+  <div class="search-container">
+    <input type="text" id="footballSearchInput" placeholder="Search football turfs..." style="width: 400px;">
+    <button onclick="searchPlace()"><i class="fas fa-search"></i></button>
+  </div>
+
+  <!-- Football Turf containers -->
+  <div class="container">
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZEFPe03Gawwamd9PtZX1WxQK50e-02VfOfuIO88rktWlirPbGHOKPl8fnsn7TepVQxULcWGlisDkxYP6Is73CgEJtTEK-0W8Gjo5jRV8o9tWSwzRR5odgMAm6uTJTXVW1FGQMiBIIZcEcBVUH9tFTOtwDVZAxYd7HWx_PGjTUALFxh&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Milan Subway Turf</h1>
+        <p class="bold">Location: 3RRR+9J8, PV Avasare Marg, LIC Colony, Suresh Colony, Santacruz West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹855</p>
+        <p class="bold">Rating: 1.6</p>
+        <a href="/slotbooking?name=Milan Subway Turf&price=Hourly Price: ₹855"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZhsTns4iinrPnRd7hhYp5EZu1Gt1zeGDs8aT81qS4bkPZVXhwiyfVY9CopHefoUJpwwJXwetLiFFNDwaN-6u9B7_GthLtIk9k5_C_gaS7V1KxHPDLPIb8vd-k48HyFAka_B17twhcSnvxMv0ccloyrp0ZJbvYpaSR7aGb9elWFqheR&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>The Spirit field</h1>
+        <p class="bold">Location: Midc, Pepper box lane, Mahakali Caves Rd, Mumbai</p>
+        <p class="bold">Hourly Price: ₹701</p>
+        <p class="bold">Rating: 1.9</p>
+        <a href="/slotbooking?name=The Spirit field&price=Hourly Price: ₹701"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZJ0X7-qL2-ptVVLEwuZmLqkjUjJpPFis3I6gAOyFK1-q_toYGpOxja6SoEOp3L65zUqOi_L_BBkC3Jue8VXR02FoyheZ8mPM_rDdFfKE-1iiGCjGy1ZfPfKnj5pIlN0lgAtR2He77_ZT8UgECJcF8AzmQPfBC4Dk9qXuBZ5DNaswTP&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Dream Sports Fields</h1>
+        <p class="bold">Location: Crystal Plaza, C702, Linking Rd, Mumbai</p>
+        <p class="bold">Hourly Price: ₹627</p>
+        <p class="bold">Rating: 2.2</p>
+        <a href="/slotbooking?name=Dream Sports Fields&price=Hourly Price: ₹627"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJaKt9xiboAhGJRu6LSEmjPAjDxI5if-xdvc0lSfxbQ7WsrwMIyTmnQRAeUDlBpZ_WzBnIQk29ucAmgEdCmQbftdmKVwQvlCM-dSIrgVQkeTAU1nJewl4UALEsBPi524Oz3BClktDVHlsq9VKz-6_752fH5cDUtnGyXDAGW9AdTpKqrm&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Young Guns Football Academy-Andheri West/Juhu</h1>
+        <p class="bold">Location: B/508 Jiten CHSL J P Road Rajkumar Bus Stop Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹681</p>
+        <p class="bold">Rating: 4.2</p>
+        <a href="/slotbooking?name=Young Guns Football Academy-Andheri West/Juhu&price=Hourly Price: ₹681"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJbSCtg5ZDcOKjU3JppgNT5K4oIsyKWXdLCTXv6Pjf4X5mQulA2HmDlHUWrVRF0s8UWDx24qik3uy_HdcEcL8859BTwELEs_xPpRaAkZprtj9YHio8I1fdyIJbU-h0ib0mtbZ9ivarHSlTuDcY3GhWRVoG0WowOwS-DpXxSboJx6lrGI&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Mumbai Football Arena</h1>
+        <p class="bold">Location: 35, Veera Desai Rd, Azad Nagar, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹964</p>
+        <p class="bold">Rating: 1.8</p>
+        <a href="/slotbooking?name=Mumbai Football Arena&price=Hourly Price: ₹964"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://example.com/default_football_image.jpg" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Yagnik Nagar Football Ground</h1>
+        <p class="bold">Location: 4RJV+GV3, Yagnik Nagar, St Anthony Marg, Andheri East</p>
+        <p class="bold">Hourly Price: ₹662</p>
+        <p class="bold">Rating: 4.2</p>
+        <a href="/slotbooking?name=Yagnik Nagar Football Ground&price=Hourly Price: ₹662"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://example.com/default_football_image.jpg" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Mfa Football Ground</h1>
+        <p class="bold">Location: Sports Complex, JP Rd, Sahayog Society, Munshi Nagar, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹509</p>
+        <p class="bold">Rating: 3.2</p>
+        <a href="/slotbooking?name=Mfa Football Ground&price=Hourly Price: ₹509"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZ9nxu8prNTc3z4F5qAxZ8cJC5yZnxj7Xje16bHgaLST-eEQYRRTAOmZS7klz8dnJEmoRyTntJO7rmCo0m5-u1_aiJQQYhLll6DnheHyNgkGzbzSVzPViTYqN0MONmB70QrWQ-ecf7ASjJp5lDWSoOdO4gSJ-f36BL64kGl16YNr1Je&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Astro Park - Lions Club</h1>
+        <p class="bold">Location: Lions Municipal Sports Complex, Milan Subway Rd, Santacruz West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹851</p>
+        <p class="bold">Rating: 1.6</p>
+        <a href="/slotbooking?name=Astro Park - Lions Club&price=Hourly Price: ₹851"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJaNZ_G-5YRYtCLLAn7i4ZWFx9pmu2jXLtKjj_eJ6DhK16f3uEvV_POHO8LCrAApSjHae8xQkl6RXruUYCPdKqg6rZZZ90V93gNM2qcJ9pP6nybnHdLdoyIyM1JR9Qoxj2HC5ff-n0ul1i4qFTlNov-1_35Dp1CXcLlQrFgaRbXAM8YH&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Footbrawl Santacruz</h1>
+        <p class="bold">Location: Lions muncipal sports complex, Milan subway, Santacruz, Mumbai</p>
+        <p class="bold">Hourly Price: ₹871</p>
+        <p class="bold">Rating: 1.3</p>
+        <a href="/slotbooking?name=Footbrawl Santacruz&price=Hourly Price: ₹871"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJarer0t_oYTODo64BZaJhsZ3W38hQmWg_mzBCb5cWlsacLygve6GWFfUghZgKyjvwSI0QEv1y3vONwfrx_pi7whG7hEDm_nKLsl7nulHnlMca-iiJyU1vrBsTzk9RDnZtIf0mHCvyMohLuoIbvH8i_mBweS5vJLKgvgrQhkrGhc9Lls&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>PASS</h1>
+        <p class="bold">Location: Plot No 10, Mahal Industrial Estate, Off Mahakali Caves Rd, Gundavali, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹657</p>
+        <p class="bold">Rating: 3.7</p>
+        <a href="/slotbooking?name=PASS&price=Hourly Price: ₹657"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYyk4EhWZVEKa5dXiKvAk-SfY8xsO84Hksy5-BMAJpxbD74G0IsPmNXuix0ATCHnwXQXTAy3b3Iieu-iU32958ut3xQbjdFWPCAhTYWaZ-UJxDwjop7I9WrggBMeFfZeyfdxfPKidtHdWjWFbYXquoMizLLQf81rZl7KV2-9FsyNw7Q&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Battlefield Andheri Chintamani Plaza</h1>
+        <p class="bold">Location: Chintamani Plaza, Andheri - Kurla Rd, Mota Nagar, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹500</p>
+        <p class="bold">Rating: 4.4</p>
+        <a href="/slotbooking?name=Battlefield Andheri Chintamani Plaza&price=Hourly Price: ₹500"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://example.com/default_football_image.jpg" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Holy family high school stadium</h1>
+        <p class="bold">Location: Holy Family High School And Jr College, Mahakali Caves Rd, Chakala, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹544</p>
+        <p class="bold">Rating: 4.1</p>
+        <a href="/slotbooking?name=Holy family high school stadium&price=Hourly Price: ₹544"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZa2ZpR5qJkl72W2rM4pdbkghGUpucTEJH-bxvzPoybjGUKUoahzCFGzVRSe4y9Kp2b0aqZtf3yHMkstRLfTJW5B4wIZ9EJLFzHhRxmBFnqmouHaOOLQZy7dVTaZNLwpJknyW8BshEpvPnoORyJI7_MJitA7vr7Wm4aSLFWuDRI_2VR&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Sports o Buddy (Football Turf)</h1>
+        <p class="bold">Location: 3, Off Veera Desai Rd, Azad Nagar, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹896</p>
+        <p class="bold">Rating: 2.4</p>
+        <a href="/slotbooking?name=Sports o Buddy (Football Turf)&price=Hourly Price: ₹896"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf football-turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYz1d1J3wiZMgMTU9UEi3JXvgnrncmAW6_kOsB2XJpcCDfqAUa-xYMGX7cWYjerUPay5TWLV8mEmwIBfpd5Nm76VuiORfDAh5iiir-9Sv4h6Ynb6OBlD99MeLQoBaSDnLLTbEVOIavjuZX6Cag-3LE39nchtSls3fzEUdOYWF4fbvGz&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Football Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Andheri Sports Complex</h1>
+        <p class="bold">Location: JP Rd, Azad Nagar, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹553</p>
+        <p class="bold">Rating: 4.0</p>
+        <a href="/slotbooking?name=Andheri Sports Complex&price=Hourly Price: ₹553"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="../static/js/turf_info.js"></script>
+</body>
+</html>

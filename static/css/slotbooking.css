@@ -3,9 +3,9 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #bdedc2; /* Lime green background color */
-}
+  }
 
-.container {
+  .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -14,61 +14,177 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: fadeIn 1s ease-out; /* Fade in animation */
-}
+  }
 
-h1 {
+  h1 {
     color: #333;
-}
+  }
 
-.form {
+  .form {
     margin-top: 20px;
-}
+  }
 
-.input-field {
+  .input-field {
     padding: 8px;
     margin-bottom: 10px;
     width: calc(100% - 16px);
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+  }
 
-.btn {
+  .btn {
     padding: 10px 20px;
+    margin-top: 40px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+  }
 
-.btn:hover {
+  .btn:hover {
     background-color: #0056b3;
-}
+  }
 
-.availability,
-.booking-form {
-    margin-top: 30px;
-}
+  .availability,
+  .booking-form {
+    margin-top: 60px;
+  }
 
-.list {
+  .list {
     list-style-type: none;
     padding: 0;
-}
+  }
 
-.availability h2,
-.booking-form h2 {
+  .availability h2,
+  .booking-form h2 {
     color: #007bff;
-}
+  }
 
-/* Animation Keyframes */
-@keyframes fadeIn {
+  /* Animation Keyframes */
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+      opacity: 0;
+      transform: translateY(-20px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+
+  .button-container {
+    margin-top: 40px; /* Increased gap */
+  }
+
+  .button-container button {
+    margin-right: 10px; /* Increased space between buttons */
+    border-radius: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  /* Assigning different colors */
+  .button-container button:nth-child(1),
+  .button-container button:nth-child(2),
+  .button-container button:nth-child(3),
+  .button-container button:nth-child(4),
+  .button-container button:nth-child(5){
+    color: #fff;
+    background-color: transparent; /* Keep the background color transparent */
+    border: 1px solid;
+  }
+  
+  .button-container button:nth-child(1) {
+    background-color: #002a41; /* Mid-Night */
+    border-color: #002a41; 
+  }
+  
+  .button-container button:nth-child(2) {
+    background-color: #ff9900; /* Morning */
+    border-color: #ff9900; /* Set border color to match background */
+  }
+  
+  .button-container button:nth-child(3) {
+    background-color: #0e7bfc; /* Afternoon */
+    border-color: #0e7bfc; /* Set border color to match background */
+  }
+  
+  .button-container button:nth-child(4) {
+    background-color: #5254b8; /* Evening */
+    border-color: #5254b8; /* Set border color to match background */
+  }
+  
+  .button-container button:nth-child(5) {
+    background-color: #142766; /* Night */
+  }
+  
+  .button-container button:hover {
+    background-color: #555; /* Darken color on hover */
+  }
+
+  /* Increased space between buttons inside .availability class */
+  .availability button {
+    margin-right: 10px;
+  }
+
+
+ 
+/* Add spacing between slots */
+.list li {
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+/* Style slots as rectangles */
+.list li {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Add hover effect */
+.list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Add plus sign */
+.list li::after {
+  content: '+';
+  float: right;
+  color: #007e33;
+  font-size: 20px;
+}
+
+/* Style selected slots */
+.list li.selected {
+  border-color:#d64444; /* Change border color to red for selected slots */
+}
+
+.booking-form {
+  position: relative; /* Position relative to contain the Confirm button */
+}
+
+.booking-form .btn {
+  margin-top: 10px; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form .btn:hover {
+  background-color: #0056b3;
+}
+
+.booking-form .empty-container {
+  height: 20px; /* Adjust height as needed */
 }

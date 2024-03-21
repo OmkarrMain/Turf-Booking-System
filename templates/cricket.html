@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cricket Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/cricket.css">
+  <link rel="stylesheet" href="../static/css/template.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -13,118 +13,186 @@
   <!--Back button-->
   <button class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
 
-    <!-- Search box -->
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
-      <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
-   </div>
-
-
-  <div class="container-wrapper">
-    <!-- App.html content -->
-    <div class="container">
-      <img src="../static/images/C Turf 7.jpg" alt="Turf Image">
-      <div class="info">
-        <h1> The Spirit Field - Samhita Complex (Building no.8)</h1>
-        <p>₹1,500 onwards • 12:00 am - 11:59 pm</p>
-        <p class="rating">Rating: 3.7</p>
-      </div>
-      <div class="location">
-        <h2>Location</h2>
-        <p>Samhita Complex, Bldg no 8, Telephone Exchange Rd., Andheri East, Sakinaka Junction, Mumbai 400072</p>
-        <div class="button">Navigate</div>
-      </div>
-      <div class="sports">
-        <h2>Available Sports</h2>
-        <p>Box Cricket, Football</p>
-      </div>
-      <div class="amenities">
-        <h2>Amenities</h2>
-        <p>Artificial Turf</p>
-      </div>
-      <div class="booking">
-        <div class="button">PROCEED TO BOOK</div>
-      </div>
-    </div>
-
-    <!-- Cricket.html content -->
-    <div class="turf-container">
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/C Turf 3.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>Falah Turf</a></h1>
-          <p class="bold">Location:</p> <p>111, Lathia Rubber Factory Rd, Saki Naka, Andheri Kurla Rd, Mumbai 400072</p> 
-          <p class="bold">Hourly Price:</p><p> ₹600</p> 
-          <p class="bold">Opening Hours: </p><p>12:00 AM - 11:59 PM</p> 
-          <p class="bold">Rating:</p><p> 4.1</p>
-          <div class="button see-more">See More Info</div>
-        </div>
-      </div>
-      <!-- Turf 2 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/cricketdash.jpeg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>Sportz Villa</a></h1>
-          <p class="bold">Location: </p><p>Aaram Society Rd, Hind Nagar, Santacruz East, Vakola Bridge, Mumbai 400055</p>
-          <p class="bold">Hourly Price: </p><p>₹450</p>
-          <p class="bold">Opening Hours: </p><p>9:00 AM - 10:00 PM</p>  
-          <p class="bold">Rating: </p> <p>3.9</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
-        </div>
-      </div>
-
-      <!-- Turf 3 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/C turf 2.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>The Spirit Field- Samita Complex</a></h1>
-          <p class="bold">Location:</p><p>Saki Vihar Road, Saki Naka</p>
-          <p class="bold">Hourly Price:</p><p> ₹600</p> 
-          <p class="bold">Opening Hours:</p><p> 10:00 AM - 10:00 PM</p> 
-          <p class="bold">Rating:</p><p> 4.7</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
-        </div>
-      </div>
-
-      <!-- Turf 4 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/C Turf 4.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>Patuck - Sporko Arena</a></h1>
-          <p class="bold">Location :</p><p>Patuck Gala Sporko Arena, Patuck Technical Highschool & Junior College, 100 Nehru Road, Rustomba Patuck Marg, Demello Compound, Santacruz East, Vakola Bridge, Mumbai 400055</p>
-          <p class="bold">Hourly Price:</p><p> ₹500 onwards</p>
-          <p class="bold">Opening Hours:</p><p> 9:00 AM - 10:00 PM</p>  
-          <p class="bold">Rating:</p><p>4.5</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
-        </div>
-      </div>
-
-      <!-- Turf 6 -->
-      <div class="turf">
-        <div class="turf-image">
-          <img src="../static/images/C Turf 6.jpg" alt="Turf Image">
-        </div>
-        <div class="turf-info">
-          <h1><a>Greenspaces Turf - Saki Naka</a></h1>
-          <p class="bold">Location :</p><p>Near Hotel Finch, Saki Vihar Rd, opposite Domino's Pizza, Andheri East, Saki Vihar Road, Mumbai 400072</p>
-          <p class="bold">Hourly Price:</p><p> ₹1200 onwards</p>
-          <p class="bold">Opening Hours:</p><p> 6:00 AM - 10:00 PM</p>  
-          <p class="bold">Rating:</p><p>3.9</p>  
-          <div class="button see-more">See More Info</div> <!-- Added button for more info -->
-        </div>
-      </div>
-
-      <!-- Add All Turf Above This -->
-    </div>
+  <!-- Search box -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search turfs..." style="width: 400px;">
+    <button onclick="searchTurf()"><i class="fas fa-search"></i></button>
   </div>
+
+  <!-- Turf containers -->
+  <div class="container">
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJb-81Es3lYcpf3NPvU45v0u-kULIHXdtAjSKwjtKmC_ouWyeW3gxh1fTQ4-T6FfwpoRXWFt_FSj3V-7vC0Kh6Jf6lJoxbXZkP_C-dvqgSiR6zpdCLleYUaq3W8EVT9cnyJK5teOuUU7sk9KfVldvCZrcQJrU3v-qpYoZamG_7G5Eim0&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Urban Sports</h1>
+        <p class="bold">Location: Prabodhankar Thackeray Krida Sankul, Shahaji Raje Marg, Vishnu Prasad Society, Navpada, Vile Parle East, Vile Parle, Mumbai</p>
+        <p class="bold">Hourly Price: ₹629</p>
+        <p class="bold">Rating: 4.2</p>
+        <a href="/slotbooking?name=Urban Sports&price=Hourly Price: ₹629"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJbf3pCEE85dHNKDFts6cdxBGeP_KKIHAbh5BMCdpMaKGqUoETtfKyLPpJWKhG6k_9Z4qDmzpIuKSbZ5UWAEpLWzL8KJ8ZdK3aF5-pstsLLTNeXcsQdv_3ztg4nBafY_tdBkKIjufBiROB31SuyqF1GkNFumCpqfvNsKW8BNMWRAhCR4&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>PASS</h1>
+        <p class="bold">Location: Plot No 10, Mahal Industrial Estate, Off Mahakali Caves Rd, Gundavali, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹935</p>
+        <p class="bold">Rating: 2.3</p>
+        <a href="/slotbooking?name=PASS&price=Hourly Price: ₹935"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYBD5WVkaDa7AUyax2HBR4Sowq0aFW6-f4SZJWXPtkLxyOZAJBzLrtsuAc4WDvovHyZ9_tX6f0wZpFE0oSqpAI8i_KNvXIQTy35LCccpoiYAnVj0cWT4nPmxzWEBIoXWh61pdoCEtU4wXKCcZnpScnmWJJEHeSn9NU6RNvJL9IxMvD8&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>UMRB Turf, Azad Nagar - by SPORLOC</h1>
+        <p class="bold">Location: Backgate, Sports Complex, Metro Station, Veera Desai Rd, next to Azad Nagar, Azad Nagar, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹923</p>
+        <p class="bold">Rating: 2.2</p>
+        <a href="/slotbooking?name=UMRB Turf, Azad Nagar - by SPORLOC&price=Hourly Price: ₹923"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZdWJ1CSNsvL9KMLsfnP4PJwT2_6DCe_tnD2OjLHf9i6a6ZlVZxrAMtObIIHsPpsE0WngfTFoY2tEYnEYnaM9MSeJdVGXorD2x1yGMI1IULu3ZwKAJbL6P6lW23HwR_A8CfRoanSLPPWL6j4zqtuKpch6A6rrNcVEXn0i58JTFyZMHB&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Kick'em Up</h1>
+        <p class="bold">Location: Plot no. 1, Hirjee Estate, Behind Excom House, Saki Vihar Rd, Saki Naka, Mumbai</p>
+        <p class="bold">Hourly Price: ₹884</p>
+        <p class="bold">Rating: 4.1</p>
+        <a href="/slotbooking?name=Kick'em Up&price=Hourly Price: ₹884"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJblsUySJHJdm-K7b32_VkFE0wJiY3J3ZI3pHF2LtGjrM9qzFra1OZvmC4FmppPE8iMsBK1HMDmDZacUU0CJZNAz_FrjFAzQGL5EDry4dLwLmzIBtQgoV430IF3_0eMs3hkM5wMMz9oQQKHu2nhuqzJTiIQXMd4WxzeNQuAXBtGmrCir&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Battlefield Andheri Chintamani Plaza</h1>
+        <p class="bold">Location: Chintamani Plaza, Andheri - Kurla Rd, Mota Nagar, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹522</p>
+        <p class="bold">Rating: 1.6</p>
+        <a href="/slotbooking?name=Battlefield Andheri Chintamani Plaza&price=Hourly Price: ₹522"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYyHkeXqyY23mnCotujd8hpnpRQvEd6HGImM88iG2dJ1wOUECqh13D83LiI9z0Dx3sg5SNxiu1-doKcE0DGdElBBtPXWpZdzH0eZCdC3UQzy-_Brp2SFgHhG-EdphEKos6vZChU2ADKWOMlv1gx0SjjNVJa3oMhie8lFLCQbwh-tFhJ&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Score</h1>
+        <p class="bold">Location: Rooftop, Marwah House, Krishanlal Marwah Marg, Marol, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹840</p>
+        <p class="bold">Rating: 3.3</p>
+        <a href="/slotbooking?name=Score&price=Hourly Price: ₹840"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJY3n4F6TsTQcG7bq_R73RJJkyy5KcH3rjVoaAWC9XLs1oVdyOhv88fDmBN9zkRdlc89IxZLuFz621dUGmKTy6kT2VXI6r5donCdxiaE5OKEJMmb3zC_GQ_VSdZ8E12YAnyHr1mwO8tQ3ahMbBzvntN3LpHDdWaLnWjHu7gTsc7CuDgW&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Footbrawl Santacruz</h1>
+        <p class="bold">Location: Lions muncipal sports complex, Milan subway, Santacruz, Mumbai</p>
+        <p class="bold">Hourly Price: ₹650</p>
+        <p class="bold">Rating: 4.9</p>
+        <a href="/slotbooking?name=Footbrawl Santacruz&price=Hourly Price: ₹650"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJaEjF9e4OUfHCHhjOCqY_Wmuz9ptKb_UYy1M4L5TvFzyAsIEaIf4S6cP9KQD-BRHB36z0wjF4dd5Jt9eydVtKcgxDIrHxPUiaVMwo4YIRxSaCwmtJsyZ_-kqYXKRbhtfVMauFlVde_PjQtb546DU3_TnFg4wUFacJXbvoA-whpe8CxU&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Prabodhankar Thackeray Krida Sankul</h1>
+        <p class="bold">Location: Shahaji Raje Marg, Vishnu Prasad Society, Navpada, Vile Parle East, Vile Parle, Mumbai</p>
+        <p class="bold">Hourly Price: ₹916</p>
+        <p class="bold">Rating: 3.1</p>
+        <a href="/slotbooking?name=Prabodhankar Thackeray Krida Sankul&price=Hourly Price: ₹916"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYCUhGWL25EvfreJmK7eGcp0ewiEqAlvJDaX_EqJo69mCA1QwncQaM3ypWH01GYSv6KtFjSJsEpblPhsVMWKkoxfJwHKOz-LQO5nr0I-KBANjvBlVuG2xiS51BXEDkAQfO3Vnvce-SphdUQt4S_9g2mEjWVJx8QDFZ9ilJlfgLiE4gU&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Green Spaces Turf</h1>
+        <p class="bold">Location: Near Hotel Finch, Saki Vihar Rd, opposite Domino's Pizza, Mumbai</p>
+        <p class="bold">Hourly Price: ₹747</p>
+        <p class="bold">Rating: 3.1</p>
+        <a href="/slotbooking?name=Green Spaces Turf&price=Hourly Price: ₹747"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJZU8ftjIAoqhNRzA8Xk6byv2pBOian5SlQ8mqll2r4xpofpSs_VvO_b6-68NkO3YMgeRavippNypF_CAi5sV7DRDnnrhZYi53JoeKSeWEnSctLyA0XUzEC2w6sYix0bHP1tHRKeaeb2fisn65JyjZNY10rz7xkFlbqDYLYAw6-ROVa4&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>OMKAR FILTERS</h1>
+        <p class="bold">Location: Vishal Cooperative Housing Society Vishal Chs, A-1, Cama Rd, near Reliance hostel, Lohana Colony, Andheri West, Mumbai</p>
+        <p class="bold">Hourly Price: ₹710</p>
+        <p class="bold">Rating: 4.6</p>
+        <a href="/slotbooking?name=OMKAR FILTERS&price=Hourly Price: ₹710"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJaqoqJN7wzyEIvGnTtiZaf3vpBbLpBUaOd4KIlSLVRsrtj71bPmGyPKaiLfVK5XKPCMzDh7Oqb1nRl-ZP5-Q5NzC3MkDqzgYcVUHgOtg_87meiqJ71gOYzZAIIGftMHDUMmSr1hkGUT6mnLNsoj3xUI-XfLwgnKxUn-FlrXF9ATxFwg&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Thackeray Udyan</h1>
+        <p class="bold">Location: 4R5X+HVC, WING B, Veer, Vile Parle East, Baji Prabhu Deshpande Marg, Vishnu Prasad Society, Navpada, Netaji Subhash Nagar, Vile Parle, Mumbai</p>
+        <p class="bold">Hourly Price: ₹914</p>
+        <p class="bold">Rating: 2.1</p>
+        <a href="/slotbooking?name=Thackeray Udyan&price=Hourly Price: ₹914"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJbKb4GhmBLsN8M51s1rnt3lSJGHpEeJC8-bLedmDjgjRVY-Fgp444v0G-SOD1UyNdtEesOf3ZZIM0O5VJIgsgbkV0PelkCGJgOl-_aJrZf3UmErZYtG5ZMBGlJ4DsbYaY8K_HNxgPmuqrK4S4k8LaxaarPQHVDc6KUvzYMmS8q9e-1i&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>MCGM Swimming Pool- Andheri East</h1>
+        <p class="bold">Location: 1, Marol Pipeline Rd, Sai Nagar, Marol, Naka, Mumbai</p>
+        <p class="bold">Hourly Price: ₹602</p>
+        <p class="bold">Rating: 1.2</p>
+        <a href="/slotbooking?name=MCGM Swimming Pool- Andheri East&price=Hourly Price: ₹602"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+    <div class="turf">
+      <div class="turf-image">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=ATplDJYv8z0uPIe8Is10RgeWxepk5Ng-dD64ZZjfJzV4W7orLkmJhWsL4meRZccoJoRC0vktqPwEa-yhkTf_PFlmuU1Tad-Qi_63EqUOcRCWuwvYQ0LWw9Lo49Sk6y_SSYoWVU5cJMLlYPYq8EkYQloeR1AM-Fg5YZHo2BIvPna5T5K4vw-o&key=AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go" alt="Turf Image">
+      </div>
+      <div class="turf-info">
+        <h1>Bluevalley swimming pools</h1>
+        <p class="bold">Location: 18, 1, Tank View, Sahar Village, Andheri East, Mumbai</p>
+        <p class="bold">Hourly Price: ₹866</p>
+        <p class="bold">Rating: 3.7</p>
+        <a href="/slotbooking?name=Bluevalley swimming pools&price=Hourly Price: ₹866"><div class="button see-more">Book Now</div></a>
+      </div>
+    </div>
+    
+  </div>
+
   <script src="../static/js/turf_info.js"></script>
 </body>
 </html>

@@ -1,60 +1,131 @@
-
-  /* Checkout Page */
-.turf-name, .dates {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.slots {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.slot-btn {
-    background-color: #ccc;
-    border: none;
-    color: #000;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    transition-duration: 0.6s;
-}
-
-.time-selection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.time-slot {
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.time-slot.selected {
-    border-color: green;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
+.proceed-button {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.proceed-btn {
-    background-color: #007bff;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.title-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.rating {
+    color: green;
+}
+
+ /* Add custom styles to increase the size of icons */
+ .fa-solid {
+    font-size: 24px; /* Change this value to adjust the size of the icons */
+}
+
+/* Calendar & navigation */
+    .container {
+            text-align: center;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .calendar-table th, .calendar-table td {
+            padding: 10px;
+            border: none;
+        }
+
+        .calendar-table th {
+            background-color: #f2f2f2;
+        }
+
+        .calendar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .calendar span {
+            margin: 0 30px;
+        }
+
+        .calendar i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .date {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+/* 5v5 buttons */
+.buttons-container {
+    margin-top: 20px;
+}
+
+.curved-button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.968);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.curved-button:hover {
+    background-color: rgb(3, 109, 247);
+}
+
+/* background of web page */
+body {
+    background-color: rgb(168, 241, 202);
+}
+
+
+
+.add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.add-button i {
+    font-size: 16px;
+}
+
+

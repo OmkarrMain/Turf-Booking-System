@@ -1,0 +1,32 @@
+<!-- Inside the body of history.html -->
+<table id="bookingHistory">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Turf Name</th>
+            <th>Date</th>
+            <th>Slot Timings</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Table rows will be populated dynamically -->
+    </tbody>
+</table>
+
+<script>
+    // Retrieve booking details from localStorage and populate the table
+    document.addEventListener("DOMContentLoaded", function () {
+        const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
+
+        if (bookingDetails) {
+            const tableBody = document.querySelector("#bookingHistory tbody");
+            const row = tableBody.insertRow();
+            row.insertCell().textContent = bookingDetails.name;
+            row.insertCell().textContent = "Turf Name"; // Replace with actual turf name
+            row.insertCell().textContent = bookingDetails.date;
+            row.insertCell().textContent = "Slot Timings"; // Replace with actual slot timings
+            row.insertCell().textContent = "Location"; // Replace with actual location
+        }
+    });
+</script>

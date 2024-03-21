@@ -1,21 +1,32 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-image: url('../images/backgroundturf.jpg');
+  background-size: 100% 100%; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
+}
+
+form {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  background-color: #fff;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -150%);
 }
 
 input[type="text"],
@@ -30,17 +41,19 @@ input[type="password"] {
 }
 
 button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #7dfd4e;
-  color: #fff;
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #fff;
+  background-color: #0056b3;
+}
+
+/* Font for web page */
+body {
+  font-family: 'Poppins', sans-serif;
 }

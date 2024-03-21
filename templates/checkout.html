@@ -3,29 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turf Booking</title>
+    <title>Falah Turf</title>
     <link rel="stylesheet" href="../static/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-        <!-- Turf Booking -->
-        <div class="turf-name">Turf Name</div>
-        <div class="dates">Dates</div>
-        <div class="slots">
-            <button class="slot-btn">Morning</button>
-            <button class="slot-btn">Afternoon</button>
-            <button class="slot-btn">Evening</button>
-            <button class="slot-btn">Night</button>
+    <div class="container">
+        <h1>Turf Names</h1>
+        <div class="rating">
+            <span>Rating of Turfs</span>
+            <i class="fa-solid fa-star"></i>
         </div>
-        <div class="time-selection">
-            <!-- Time slots will be dynamically generated -->
+        <div class="calendar">
+            <i class="fas fa-chevron-left" id="prevMonth"></i>
+            <span>March 2024</span>
+            <i class="fas fa-chevron-right" id="nextMonth"></i>
         </div>
-        <div class="footer">
-            <div class="total-time">Total Time: 0 hours</div>
-            <div class="total-amount">Total Amount: $0</div>
-            <button class="proceed-btn">Proceed</button>
+        <table class="calendar-table"> 
+            <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td><span class="date">1</span>19</td>
+                    <td><span class="date">2</span>20</td>
+                    <td><span class="date">3</span>21</td>
+                    <td><span class="date">4</span>22</td>
+                    <td><span class="date">5</span>23</td>
+                    <td><span class="date">6</span>24</td>
+                    <td><span class="date">7</span>25</td>
+                </tr>
+                <!-- You can populate this table with calendar data using JavaScript -->
+            </tbody>
+        </table>
+        <div class="buttons-container">
+            <button class="curved-button"><i class="far fa-sun afternoon-icon"></i>Afternoon</button>
+            <button class="curved-button">5v5</button>
+            <button class="curved-button">6v6</button>
         </div>
-        <script src="../static/js/checkout.js"></script>
+        <div class="small_container">
+            Container 1
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="small_container">
+            Container 2
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+        </div>
     </div>
-
+    <button class="proceed-button">Proceed</button>
+    <script src="../static/js/checkout.js"></script>
 </body>
 </html>
