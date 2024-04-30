@@ -1,32 +1,129 @@
-<!-- Inside the body of history.html -->
-<table id="bookingHistory">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Turf Name</th>
-            <th>Date</th>
-            <th>Slot Timings</th>
-            <th>Location</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Table rows will be populated dynamically -->
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-    // Retrieve booking details from localStorage and populate the table
-    document.addEventListener("DOMContentLoaded", function () {
-        const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
-
-        if (bookingDetails) {
-            const tableBody = document.querySelector("#bookingHistory tbody");
-            const row = tableBody.insertRow();
-            row.insertCell().textContent = bookingDetails.name;
-            row.insertCell().textContent = "Turf Name"; // Replace with actual turf name
-            row.insertCell().textContent = bookingDetails.date;
-            row.insertCell().textContent = "Slot Timings"; // Replace with actual slot timings
-            row.insertCell().textContent = "Location"; // Replace with actual location
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            /* Increase the margin for a larger gap between the container and the content */
         }
-    });
-</script>
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            /* Increase the padding for more space around content */
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .booked {
+            border: 2px solid grey;
+            /* Red border for booked slots */
+            pointer-events: none;
+            /* Disable click events on booked slots */
+        }
+
+        /* Style for Back button */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            /* Increase the distance from the top */
+            right: 30px;
+            /* Increase the distance from the right */
+            padding: 12px 24px;
+            /* Increase the padding for a larger button */
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 15px;
+            /* Make the border radius larger for rounded corners */
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            /* Add transition for smooth hover effect */
+        }
+
+        .back-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Booking History</h2>
+    <a href="/" class="back-button">Back</a>
+
+    <table id="bookingTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Turf Name</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Selected Slots</th>
+            </tr>
+        </thead>
+        <tbody id="bookingData">
+            <!-- Table content will be dynamically populated -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetchBookingData();
+        });
+
+        function fetchBookingData() {
+            fetch('/api/booking')
+                .then(response => response.json())
+                .then(data => {
+                    populateBookingTable(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching booking data:', error);
+                });
+        }
+
+        function populateBookingTable(bookingData) {
+            const tableBody = document.getElementById('bookingData');
+            tableBody.innerHTML = '';
+
+            bookingData.forEach((booking, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${booking.date}</td>
+                <td>${booking.turf_name}</td>
+                <td>${booking.name}</td>
+                <td>${booking.mobile}</td>
+                <td>${booking.selected_slots.join(', ')}</td>
+            `;
+                // Check if the turf is already booked and apply styling accordingly
+                if (booking.status === 'Booked') {
+                    row.classList.add('booked');
+                }
+                tableBody.appendChild(row);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -6,10 +6,10 @@ from flask_mail import Mail, Message
 import random
 import subprocess
 from functools import wraps
+from datetime import datetime, timedelta
 
 app = Flask(__name__, static_url_path='/static')
 app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
-
 app.config['SECRET_KEY'] = b'idkwhatitis'
 
 app.config['MAIL_SERVER'] = 'smtp.elasticemail.com'
@@ -21,12 +21,13 @@ app.config['MAIL_USE_SSL'] = False
 
 mongo = PyMongo(app)
 mail = Mail(app)
+bookings = mongo.db.bookings
 
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'user_name' not in session:
-            return redirect(url_for('signinreg'))
+            return redirect(url_for('/signinreg'))
         return f(*args, **kwargs)
     return decorated_function
 
@@ -35,7 +36,9 @@ def login_required(f):
 @app.route('/')
 def index():
     user_name = session.get('user_name')
-    return render_template('index.html', user_name=user_name)
+    success_message = request.args.get('success')  
+    error_message = request.args.get('error') 
+    return render_template('index.html', user_name=user_name, success_message=success_message, error_message=error_message)
 
 @app.route('/logout')
 def logout():
@@ -62,17 +65,13 @@ def register():
     else:
         return render_template('signinreg.html')
 
-@app.route('/signinreg')
-def signinreg():
-    return render_template('signinreg.html')
-
 @app.route('/signin', methods=['POST'])
 def signin():
     email = request.form.get('email')
     password = request.form.get('user_password')
 
     if not email or not password:
-        return jsonify({'error': 'Please enter email and password'}), 400
+        return redirect(url_for('index', error='Please enter email and password'))
 
     # Retrieve user from MongoDB
     users = mongo.db.users
@@ -81,42 +80,23 @@ def signin():
     if user and bcrypt.checkpw(password.encode('utf-8'), base64.b64decode(user['password'])):
         # Set user's name in session
         session['user_name'] = user['name']
-        return jsonify({'message': 'Login Success'}), 200
-    else:
-        return jsonify({'error': 'Login Failed'}), 401
-
-#Admin Login
-    
-@app.route('/adminsignin', methods=['POST'])
-def adminsignin():
-    email = request.form.get('email')
-    password = request.form.get('user_password')
-
-    if not email or not password:
-        return jsonify({'error': 'Please enter email and password'}), 400
-
-    users = mongo.db.users
-    user = users.find_one({'email': email})
-
-    if user and bcrypt.checkpw(password.encode('utf-8'), base64.b64decode(user['password'])):
-        # Check if the email matches the desired admin email addresses
-        if email in ["admin1@gmail.com", "admin2@gmail.com"]:
-            return redirect(url_for('adminpage')) 
+        
+        # Redirect based on user's email
+        if email == "admin@gmail.com":
+            return redirect(url_for('adminpage', success='Admin logged in successfully!'))
         else:
-            # Set user's name in session
-            session['user_name'] = user['name']
-            return jsonify({'message': 'Login Success'}), 200
+            # Only pass success message if user logs in successfully
+            return redirect(url_for('index', success='Logged in Successfully!!'))
     else:
-        return jsonify({'error': 'Login Failed'}), 401
+        return redirect(url_for('index', error='Invalid Credentials!!'))
 
-
+    
 
 @app.route('/adminpage')
-@login_required
 def adminpage():
-    return render_template('adminpage.html')
-
-
+    success_message = request.args.get('success')  
+    error_message = request.args.get('error') 
+    return render_template('adminpage.html', success_message=success_message, error_message=error_message)
 
 
 @app.route('/forgot_password', methods=['GET', 'POST'])
@@ -158,6 +138,64 @@ def reset_password():
             return render_template('reset_password.html', error_message=error_message)
     
     return render_template('reset_password.html')
+
+@app.route('/submit_booking', methods=['POST'])
+def submit_booking():
+    if request.method == 'POST':
+        # Parse JSON data sent from frontend
+        data = request.json
+        turf_name = data.get('turfName')
+        date = data.get('date')
+        name = data.get('name')
+        mobile = data.get('mobile')
+        selected_slots = data.get('selectedSlots')  # Get the selected slots
+
+        print("Received data:", turf_name, date, name, mobile, selected_slots)
+
+        # Check if the time slot is already booked
+        existing_booking = bookings.find_one({
+            'turf_name': turf_name,
+            'date': date,
+            'selected_slots': selected_slots
+        })
+        if existing_booking:
+            return jsonify({'message': 'This time slot is already booked by another user'}), 400
+        
+        # Save booking information into MongoDB
+        bookings.insert_one({
+            'turf_name': turf_name,
+            'date': date,
+            'name': name,
+            'mobile': mobile,
+            'selected_slots': selected_slots,  # Inserting selected slots into the booking data
+            'timestamp': datetime.now()  # Adding current timestamp to the booking data
+        })
+
+        return jsonify({'message': 'Booking submitted successfully'})
+
+# To delete booking data from MongoDB after one day, we are using MongoDB's TTL (Time-To-Live) indexes
+mongo.db.bookings.create_index("timestamp", expireAfterSeconds=86400)
+
+    
+@app.route('/api/booking')
+def get_booking_data():
+    # Fetch booking data from MongoDB
+    booking_data = list(bookings.find({}, {'_id': 0}))  # Exclude _id field from the result
+
+    # Mark time slots as unavailable if they were booked within the past 24 hours
+    for booking in booking_data:
+        if 'timestamp' in booking:
+            booking_time = booking['timestamp']
+            if datetime.now() - booking_time < timedelta(days=1):
+                booking['status'] = 'Booked'
+            else:
+                booking['status'] = 'Available'
+        else:
+            booking['status'] = 'Available'
+
+    return jsonify(booking_data)
+
+
 
 @app.route('/cricket')
 @login_required
