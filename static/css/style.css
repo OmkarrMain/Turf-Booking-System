@@ -407,3 +407,22 @@ hr {
     flex-basis: 100%;
   }
 }
+
+/* Error Message */
+
+.floating-container {
+  position: fixed;
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 15px;
+  display: none; 
+  z-index: 999; 
+  max-width: 300px; 
+  text-align: center; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  border-radius: 5px; 
+}

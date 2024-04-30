@@ -102,7 +102,7 @@ function displayAvailableSlots(slots) {
                 slot.selected = false;
                 selectedSlotsCount--;
             } else {
-                if (selectedSlotsCount < 2) { // Allow maximum 2 slots to be booked
+                if (selectedSlotsCount < 2) {
                     slot.selected = true;
                     selectedSlotsCount++;
                 } else {
@@ -131,14 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('turfName').innerText = turfName;
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Get the place name from URL parameters
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const placeName = urlParams.get('name');
-//     // Insert the place name into the h1 tag
-//     document.getElementById('placeName').innerText = placeName;
-// });
-
 
 
 //Logic for frtchig Price and Multiplying it 
@@ -156,18 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('totalAmount').innerText = turfPrice;
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Get the turf name and price from URL parameters
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const placeName = urlParams.get('name');
-//     const placePrice = parseInt(urlParams.get('price')); // Convert price to integer
-
-//     // Insert the place name into the h1 tag
-//     document.getElementById('placeName').innerText = placeName;
-
-//     // Display the place price in the total amount container
-//     document.getElementById('totalAmount').innerText = '₹' + placePrice;
-// });
 
 //Storing Data in History.html
 
@@ -186,6 +166,124 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(successMessage);
 
         // Redirect user to index.html
-        window.location.href = "/";
+        // window.location.href = "/";
     });
 });
+
+//Retriving data from frontend and storing it in backend using Jsonify
+document.addEventListener("DOMContentLoaded", function () {
+    const bookingForm = document.querySelector(".booking-form form");
+
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get user input values
+        const turfName = document.getElementById("turfName").innerText;
+        const date = document.getElementById("date").value;
+        const name = document.getElementById("name").value;
+        const mobile = document.getElementById("mobile").value;
+
+        // Get the selected slot timing
+        const selectedSlots = [];
+        const selectedSlotElements = document.querySelectorAll("#availableSlotsList li.selected");
+        selectedSlotElements.forEach(function (slotElement) {
+            selectedSlots.push(slotElement.textContent);
+        });
+
+        // Construct the data object to send to backend
+        const data = {
+            turfName: turfName,
+            date: date,
+            name: name,
+            mobile: mobile,
+            selectedSlots: selectedSlots
+        };
+
+        // Print the data in console
+        console.log("Booking Data:", data);
+
+        // Send booking information to Flask backend
+        fetch('/submit_booking', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                // Handle success response
+                console.log('Success:', data);
+                window.location.href = '/history'; // Redirect to history.html after successful booking
+            })
+            .catch(error => {
+                // Handle error
+                console.error('Error:', error);
+            });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Event listener to capture slot selection
+        const availableSlotsList = document.getElementById("availableSlotsList");
+        availableSlotsList.addEventListener("click", function (event) {
+            const clickedSlot = event.target;
+            if (clickedSlot.tagName === "LI") {
+                // Toggle selected class and update border color
+                toggleSlotSelection(clickedSlot);
+            }
+        });
+    });
+
+    function toggleSlotSelection(slotElement) {
+        const slotIndex = Array.from(slotElement.parentNode.children).indexOf(slotElement);
+        const selectedSlots = slotsByPeriod[selectedPeriod];
+
+        const slot = selectedSlots[slotIndex];
+        if (slot.selected) {
+            slot.selected = false;
+            selectedSlotsCount--;
+        } else {
+            if (selectedSlotsCount < 2) {
+                slot.selected = true;
+                selectedSlotsCount++;
+            } else {
+                alert("You can only book a maximum of 2 slots.");
+                return;
+            }
+        }
+
+        // Toggle selected class and update border color
+        slotElement.classList.toggle("selected");
+    }
+
+
+});
+
+
+//Radio Button Coonfitmation
+
+function validateForm() {
+    var paymentMethod = document.getElementsByName("payment");
+    var isChecked = false;
+    for (var i = 0; i < paymentMethod.length; i++) {
+        if (paymentMethod[i].checked) {
+            isChecked = true;
+            break;
+        }
+    }
+    if (!isChecked) {
+        alert("Please select a mode of payment.");
+        return false;
+    }
+    return true;
+}
+
+function toggleRadio(id) {
+    var radio = document.getElementById(id);
+    radio.checked = !radio.checked; // Toggle the checked state
+}

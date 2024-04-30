@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="turfName"></h1>
+      <h1 id="turfName" name="turfName"></h1>
       <!-- <h1 id="placeName"></h1> -->
-      <form action="#" class="form" id="availabilityForm">
+      <form action="/submit_booking" class="form" id="availabilityForm">
         <label for="date">Select Date:</label>
         <input type="date" id="date" name="date" class="input-field" min="" />
         <div class="button-container" id="buttonContainer"></div>
@@ -39,10 +39,14 @@
           <input
             type="tel"
             id="mobile"
-            name="mobile"
+            name="slot_mobile"
             required
             class="input-field"
           />
+          <div class="payment-method">
+            <label for="payment">Mode of Payment:</label>
+            <input type="radio" id="payment" name="payment" value="cash" required> Cash
+          </div>
           <div class="empty-container"></div> 
           <button type="submit" class="btn">Confirm</button> 
         </form>
