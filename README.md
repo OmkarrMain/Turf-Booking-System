@@ -6,7 +6,7 @@ password:-07042003
 
 TOM TOM Api Maps:-
 Website Link:- https://developer.tomtom.com/
-ID and Pass :- Omkarmain786@gmail.com @Omkar786
+ID and Pass :- 
 Map Code :- https://github.com/tipswithpunch/youtube-tutorials/blob/main/tomtom-map.html
 Longitude and Latitude Change :- https://developer.tomtom.com/maps-sdk-web-js/functional-examples#examples,map,search-with-autocomplete.html%20
 api_key = "qmyhAeTuQmdt5EhAFtoNUg6TTZ6WRygb"
@@ -17,15 +17,6 @@ docker run -d -p 8880:3306 --name mysql_turf_container -e MYSQL_ROOT_PASSWORD=om
 Google Maps APi Key :-
 "AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go"
 
-Mongo DB Atlas:
-username : omkarr
-password : Omkar786
-
-MongoDB Connection String:
-mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/
-
-MongoDB Connection String:
-mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/
 
 MongoDB Connection String:
 mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/
