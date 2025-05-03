@@ -4,7 +4,7 @@ from jinja2 import Environment, FileSystemLoader
 import random
 
 # Initialize Google Maps API client
-gmaps = googlemaps.Client(key='AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go')  # Replace 'YOUR_API_KEY_HERE' with your actual API key
+gmaps = googlemaps.Client(key='')  # Replace 'YOUR_API_KEY_HERE' with your actual API key
 
 def get_user_location():
     """Get user's current location."""
