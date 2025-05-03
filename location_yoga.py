@@ -3,7 +3,7 @@ import googlemaps
 from jinja2 import Environment, FileSystemLoader
 import random
 
-gmaps = googlemaps.Client(key='AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go')
+gmaps = googlemaps.Client(key='')
 
 def get_user_location():
     try:
