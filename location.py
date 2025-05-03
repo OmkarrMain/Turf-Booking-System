@@ -3,7 +3,7 @@ import googlemaps
 import webbrowser
 import os
 
-gmaps = googlemaps.Client(key='AIzaSyCYcHknfiD3Mj7qm5bKSkxuKFWoUtR71Go')
+gmaps = googlemaps.Client(key='')
 
 # Geolocation API to get user's current location
 def get_user_location():
