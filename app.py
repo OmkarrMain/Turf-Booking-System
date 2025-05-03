@@ -9,13 +9,13 @@ from functools import wraps
 from datetime import datetime, timedelta
 
 app = Flask(__name__, static_url_path='/static')
-app.config["MONGO_URI"] = "mongodb+srv://omkarr:Omkar786@tbs.inphtk9.mongodb.net/TBS"
+app.config["MONGO_URI"] = ""
 app.config['SECRET_KEY'] = b'idkwhatitis'
 
 app.config['MAIL_SERVER'] = 'smtp.elasticemail.com'
 app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = 'turftribe0781@gmail.com'
-app.config['MAIL_PASSWORD'] = 'F2560104AC310A61E0ECE9183FD3BAF8009A'
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
